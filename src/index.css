@@ -1,0 +1,91 @@
+/* 1. Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* 2. Initialize Tailwind v4 */
+@import "tailwindcss";
+
+/* 3. Define Theme (Colors, Fonts, Animations) */
+@theme {
+  /* Custom Fonts */
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  /* Custom Colors */
+  --color-td-black: #050505;
+  --color-td-yellow: #fed008;
+  --color-td-dark: #0f0f0f;
+  --color-linkedin: #0077b5;
+
+  /* Custom Animations */
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-hand-guide: handGuide 1.5s ease-in-out infinite;
+
+  /* Keyframes */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes handGuide {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(15px);
+    }
+  }
+}
+
+/* 4. Custom Utilities */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .gpu-accelerate {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}
+
+/* 5. Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: white;
+    color: var(--color-td-black);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Prevent image dragging ghost effect */
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+  }
+}
