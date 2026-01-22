@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Logo from "../assets/LOGO_1.png";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-20">
           <div className="space-y-8">
             <img
-              src="/LOGO_1.png"
+              src={Logo}
               alt="TransData Logo"
               className="w-37.5 object-contain"
             />

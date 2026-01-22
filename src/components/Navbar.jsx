@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Logo from "../assets/LOGO_1.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,7 +45,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link to="/" className="z-50">
         <img
-          src="/LOGO_1.png"
+          src={Logo}
           alt="TransData"
           id="nav-logo"
           className={`w-40 md:w-45 object-contain transition-[filter] duration-300 ${
@@ -107,7 +108,7 @@ const Navbar = () => {
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
-        <a
+        {/* <a
           href="#contact"
           onClick={(e) => handleNavClick(e, "contact")}
           className={`text-[0.7rem] font-bold uppercase tracking-widest px-5 py-2.5 rounded-sm transition-colors ${
@@ -117,7 +118,17 @@ const Navbar = () => {
           }`}
         >
           Contact Us
-        </a>
+        </a> */}
+        <Link
+          to="/contact" // Use React Router Link instead of a href
+          className={`text-[0.7rem] font-bold uppercase tracking-widest px-5 py-2.5 rounded-sm transition-colors ${
+            scrolled
+              ? "bg-black text-white hover:bg-td-yellow hover:text-black"
+              : "bg-white text-black hover:bg-td-yellow hover:text-black"
+          }`}
+        >
+          Contact Us
+        </Link>
       </div>
     </nav>
   );
