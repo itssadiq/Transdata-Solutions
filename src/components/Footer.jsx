@@ -11,7 +11,7 @@ const Footer = () => {
             <img
               src="/LOGO_1.png"
               alt="TransData Logo"
-              className="w-[150px] object-contain"
+              className="w-37.5 object-contain"
             />
             <p className="text-sm leading-relaxed text-gray-600">
               With more than 12 years of experience, TransData Solutions is a
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-base font-bold text-black mb-6 text-purple-900">
+            <h4 className="text-base font-bold mb-6 text-purple-900">
               General
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600">
@@ -78,7 +78,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 class="text-base font-bold text-black mb-6 text-purple-900">
+            <h4 className="text-base font-bold mb-6 text-purple-900">
               Solutions
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600">
@@ -115,7 +115,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 class="text-base font-bold text-black mb-6 text-purple-900">
+            <h4 className="text-base font-bold mb-6 text-purple-900">
               Social Media
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600">
@@ -181,7 +181,7 @@ const Footer = () => {
               Privacy Policy
             </a>
             <span className="text-gray-300">|</span>
-            <a href="#" class="hover:text-black transition-colors">
+            <a href="#" className="hover:text-black transition-colors">
               Terms & Conditions
             </a>
           </div>

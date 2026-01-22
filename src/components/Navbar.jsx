@@ -47,7 +47,7 @@ const Navbar = () => {
           src="/LOGO_1.png"
           alt="TransData"
           id="nav-logo"
-          className={`w-[160px] md:w-[180px] object-contain transition-[filter] duration-300 ${
+          className={`w-40 md:w-45 object-contain transition-[filter] duration-300 ${
             scrolled ? "brightness-100 invert-0" : "brightness-0 invert"
           }`}
         />

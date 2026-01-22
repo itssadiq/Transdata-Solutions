@@ -59,7 +59,7 @@ const About = () => {
   return (
     <div ref={containerRef}>
       {/* HERO SECTION */}
-      <div className="relative h-[80vh] w-full overflow-hidden flex flex-col justify-center items-start text-left bg-td-black">
+      <div className="relative h-screen w-full overflow-hidden flex flex-col justify-center items-start text-left bg-td-black">
         <div className="absolute inset-0 z-0 opacity-40">
           <video
             autoPlay
@@ -74,7 +74,7 @@ const About = () => {
             />
           </video>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-td-black via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-td-black via-transparent to-transparent"></div>
 
         <div className="relative z-10 container mx-auto px-6 md:px-20 mt-20">
           <div className="overflow-hidden mb-6">
@@ -108,7 +108,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 reveal-up">
             <div>
               <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
-                <span class="w-8 h-[2px] bg-black"></span> 01 // The Story
+                <span className="w-8 h-0.5 bg-black"></span> 01 // The Story
               </h2>
               <h3 className="text-4xl font-bold leading-tight">
                 More than just an IT company. We are your strategic growth
@@ -145,7 +145,7 @@ const About = () => {
               </p>
             </div>
             <div className="text-center md:text-left">
-              <h4 class="text-5xl font-black text-black mb-2">
+              <h4 className="text-5xl font-black text-black mb-2">
                 <span className="counter" data-target="350">
                   0
                 </span>
@@ -156,7 +156,7 @@ const About = () => {
               </p>
             </div>
             <div className="text-center md:text-left">
-              <h4 class="text-5xl font-black text-black mb-2">
+              <h4 className="text-5xl font-black text-black mb-2">
                 <span className="counter" data-target="265">
                   0
                 </span>
@@ -167,7 +167,7 @@ const About = () => {
               </p>
             </div>
             <div className="text-center md:text-left">
-              <h4 class="text-5xl font-black text-black mb-2">
+              <h4 className="text-5xl font-black text-black mb-2">
                 <span className="counter" data-target="24">
                   0
                 </span>
@@ -182,7 +182,7 @@ const About = () => {
 
       {/* MISSION & VISION */}
       <section className="py-24 bg-td-black text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-td-yellow/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-125 h-125 bg-td-yellow/5 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="container mx-auto px-6 md:px-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -221,7 +221,7 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-20">
           <div className="mb-16 reveal-up">
             <h2 className="text-xs font-bold text-black mb-6 uppercase tracking-widest flex items-center gap-3">
-              <span class="w-8 h-[2px] bg-td-yellow"></span> 02 // Core Values
+              <span className="w-8 h-0.5 bg-td-yellow"></span> 02 // Core Values
             </h2>
             <h3 className="text-4xl font-bold">The Pillars of Our Success</h3>
           </div>
