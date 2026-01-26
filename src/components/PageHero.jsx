@@ -1,78 +1,99 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 
-const PageHero = ({
-  subtitle = "Get in Touch",
-  title1 = "Let's Start a",
-  title2 = "Conversation.",
-  description = "Have a project in mind? We are ready to build the future.",
-  bgImage,
-}) => {
-  const compRef = useRef(null);
+const PageHero = ({ title, highlight, subtitle, description, bgImage }) => {
+  const heroRef = useRef(null);
 
-  // Self-contained animation logic (Optional: you can also trigger this from parent)
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      tl.to(".hero-reveal", {
+      // 1. Reveal Subtitle
+      tl.to(".hero-subtitle", {
         y: 0,
         opacity: 1,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "power4.out",
+        duration: 1,
+        ease: "power3.out",
         delay: 0.2,
       });
-    }, compRef);
+
+      // 2. Reveal Title Lines
+      tl.to(
+        ".hero-text-reveal",
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          stagger: 0.15,
+          ease: "power4.out",
+        },
+        "-=0.8",
+      );
+
+      // 3. Reveal Description
+      tl.to(
+        ".hero-desc",
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.8",
+      );
+    }, heroRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
     <div
-      ref={compRef}
-      className="relative bg-td-black text-white pt-48 pb-24 border-b border-white/10 overflow-hidden"
+      ref={heroRef}
+      className="relative h-[60vh] md:h-[100vh] w-full overflow-hidden flex flex-col justify-center items-start text-left bg-td-black border-b border-white/10"
     >
-      {/* 1. Background Image Layer */}
-      {bgImage && (
-        <div className="absolute inset-0 z-0">
+      {/* Dynamic Background Image */}
+      <div className="absolute inset-0 z-0">
+        {bgImage && (
           <img
             src={bgImage}
-            alt={title1}
+            alt={title}
             className="w-full h-full object-cover opacity-40 select-none pointer-events-none"
           />
-          {/* Gradient Overlay for Text Contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-td-black via-td-black/60 to-transparent"></div>
-        </div>
-      )}
+        )}
+        {/* Gradient Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-linear-to-t from-td-black via-td-black/40 to-transparent"></div>
+      </div>
 
-      {/* 2. Content Layer */}
-      <div className="relative z-10 container mx-auto px-6 md:px-20">
+      <div className="relative z-10 container mx-auto px-6 md:px-20 mt-20">
         {/* Subtitle */}
-        <p className="hero-reveal text-td-yellow font-mono text-xs uppercase tracking-[0.3em] mb-6 translate-y-8 opacity-0">
-          {subtitle}
-        </p>
+        <div className="overflow-hidden mb-6">
+          <p className="hero-subtitle text-td-yellow font-medium text-[11px] uppercase tracking-[0.4em] opacity-0 translate-y-4">
+            {subtitle}
+          </p>
+        </div>
 
-        {/* Title (Split for Staggered Animation) */}
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+        {/* Main Title (Supports two lines via 'highlight' prop) */}
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-white mb-8">
           <div className="overflow-hidden">
-            <div className="hero-reveal translate-y-full opacity-0">
-              {title1}
+            <div className="hero-text-reveal translate-y-full opacity-0">
+              {title}
             </div>
           </div>
-          {title2 && (
+          {highlight && (
             <div className="overflow-hidden">
-              <div className="hero-reveal translate-y-full opacity-0 text-gray-300">
-                {title2}
+              <div className="hero-text-reveal translate-y-full opacity-0 text-gray-400">
+                {highlight}
               </div>
             </div>
           )}
         </h1>
 
         {/* Description */}
-        <p className="hero-reveal text-gray-300 text-lg max-w-2xl translate-y-8 opacity-0 font-medium leading-relaxed">
-          {description}
-        </p>
+        {description && (
+          <p className="hero-desc text-white/80 text-lg max-w-2xl font-medium opacity-0 translate-y-4 leading-relaxed">
+            {description}
+          </p>
+        )}
       </div>
     </div>
   );
