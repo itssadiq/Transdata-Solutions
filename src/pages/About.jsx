@@ -1,10 +1,10 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Hero from "../components/about/Hero";
 import OurStory from "../components/about/OurStory";
 import Mission from "../components/about/Mission";
 import CoreValues from "../components/about/CoreValues";
+import PageHero from "../components/PageHero";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,7 +62,14 @@ const About = () => {
   return (
     <div ref={containerRef}>
       {/* HERO SECTION */}
-      <Hero />
+
+      <PageHero
+        subtitle="Who We Are"
+        title="Architects of"
+        highlight="Intelligent Infrastructure."
+        description="Since 2013, we have been bridging the gap between complex technology and tangible business results across the globe."
+        bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+      />
       {/* OUR STORY & STATS */}
       <OurStory />
 
