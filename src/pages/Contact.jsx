@@ -50,11 +50,11 @@ const Contact = () => {
     <div ref={containerRef} className="bg-white">
       {/* 1. HERO HEADER (Dark Theme) */}
       <PageHero
-        subtitle="Contact Us"
-        title1="Let's Start a"
-        title2="Conversation."
-        description="Have a project in mind or want to consult with our experts? We are ready to build the intelligent infrastructure of your future."
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+        subtitle="Get in Touch"
+        title="Let's Start a"
+        highlight="Conversation."
+        description="Have a project in mind? We are ready..."
+        bgImage="..."
       />
 
       {/* 2. CONTACT GRID */}
