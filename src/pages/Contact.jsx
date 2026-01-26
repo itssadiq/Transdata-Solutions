@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Hero from "../components/contact/Hero";
 import ContactGrid from "../components/contact/ContactGrid";
 import Map from "../components/contact/Map";
+import PageHero from "../components/PageHero";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +49,13 @@ const Contact = () => {
   return (
     <div ref={containerRef} className="bg-white">
       {/* 1. HERO HEADER (Dark Theme) */}
-      <Hero />
+      <PageHero
+        subtitle="Contact Us"
+        title1="Let's Start a"
+        title2="Conversation."
+        description="Have a project in mind or want to consult with our experts? We are ready to build the intelligent infrastructure of your future."
+        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+      />
 
       {/* 2. CONTACT GRID */}
       <ContactGrid />
