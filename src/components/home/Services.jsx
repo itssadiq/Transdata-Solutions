@@ -7,25 +7,34 @@ const Services = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
-  // Drag Interaction Logic
-  const handleMouseDown = (e) => {
-    // 1. If clicking the button, do NOT start drag
-    if (e.target.closest("button")) return;
+  // Mobile Tap State
+  const [clickedCard, setClickedCard] = useState(null);
 
+  // Drag Logic
+  const handleMouseDown = (e) => {
+    if (e.target.closest("button")) return;
     setIsDown(true);
     setStartX(e.pageX - servicesRef.current.offsetLeft);
     setScrollLeft(servicesRef.current.scrollLeft);
   };
-
   const handleMouseLeave = () => setIsDown(false);
   const handleMouseUp = () => setIsDown(false);
-
   const handleMouseMove = (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - servicesRef.current.offsetLeft;
     const walk = (x - startX) * 2;
     servicesRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  // Mobile Tap Logic
+  const handleCardClick = (index) => {
+    if (Math.abs(startX - (startX + 1)) > 5 && isDown) return; // Ignore drag clicks
+    if (clickedCard === index) {
+      setClickedCard(null);
+    } else {
+      setClickedCard(index);
+    }
   };
 
   const services = [
@@ -123,7 +132,7 @@ const Services = () => {
       {/* Cards Container */}
       <div
         ref={servicesRef}
-        className={`flex gap-8 overflow-x-auto pb-16 pt-4 px-6 md:px-20 cursor-grab no-scrollbar select-none ${
+        className={`flex gap-6 md:gap-8 overflow-x-auto pb-16 pt-4 px-6 md:px-20 cursor-grab no-scrollbar select-none ${
           isDown ? "active cursor-grabbing" : ""
         }`}
         onMouseDown={handleMouseDown}
@@ -132,13 +141,17 @@ const Services = () => {
         onMouseMove={handleMouseMove}
       >
         {services.map((service, index) => (
-          // CARD WRAPPER - Removed hover:cursor-default to fix Drag Cursor issue
+          // CARD WRAPPER - Responsive Width
           <div
             key={index}
-            className="group relative flex-none w-100 h-100 [perspective:1000px]"
+            onClick={() => handleCardClick(index)}
+            className="group relative flex-none w-[85vw] md:w-100 h-100 md:h-100 [perspective:1000px]"
           >
-            {/* CARD INNER (Rotates) */}
-            <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-xl group-hover:shadow-2xl">
+            {/* CARD INNER */}
+            <div
+              className={`relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] shadow-xl group-hover:shadow-2xl 
+              ${clickedCard === index ? "[transform:rotateY(180deg)]" : "group-hover:[transform:rotateY(180deg)]"}`}
+            >
               {/* === FRONT FACE === */}
               <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] bg-black rounded-sm overflow-hidden">
                 <img
@@ -148,7 +161,7 @@ const Services = () => {
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none opacity-90"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent pointer-events-none opacity-90"></div>
 
                 <div className="absolute inset-0 p-8 flex flex-col justify-between z-20">
                   <div className="flex justify-between items-start">
@@ -172,7 +185,6 @@ const Services = () => {
 
               {/* === BACK FACE === */}
               <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0f0f0f] p-8 flex flex-col justify-center items-start rounded-sm border-2 border-td-yellow overflow-hidden">
-                {/* Decoration */}
                 <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-td-yellow/5 rounded-full blur-2xl pointer-events-none"></div>
 
                 <span className="text-td-yellow text-4xl font-black mb-6 opacity-20 select-none">
@@ -187,12 +199,10 @@ const Services = () => {
                   {service.desc}
                 </p>
 
-                {/* Explore Button: Added !cursor-pointer to override parent cursor-grab */}
                 <button
-                  className="mt-8 flex items-center gap-2 text-td-yellow text-xs font-bold uppercase tracking-widest relative z-[50] !cursor-pointer hover:text-white transition-colors duration-300"
+                  className="mt-8 flex items-center gap-2 text-td-yellow text-xs font-bold uppercase tracking-widest relative z-[100] !cursor-pointer pointer-events-auto hover:text-white transition-colors duration-300"
                   onClick={(e) => {
                     e.stopPropagation();
-                    // Add your navigation or modal logic here
                     console.log("Clicked Explore", service.title);
                   }}
                 >
@@ -203,7 +213,7 @@ const Services = () => {
             </div>
           </div>
         ))}
-        <div className="min-w-[50px]"></div>
+        <div className="min-w-50px"></div>
       </div>
     </section>
   );
