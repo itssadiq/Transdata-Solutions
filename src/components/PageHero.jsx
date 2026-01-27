@@ -49,7 +49,7 @@ const PageHero = ({ title, highlight, subtitle, description, bgImage }) => {
   return (
     <div
       ref={heroRef}
-      className="relative h-[60vh] md:h-[100vh] w-full overflow-hidden flex flex-col justify-center items-start text-left bg-td-black border-b border-white/10"
+      className="relative h-screen md:h-screen w-full overflow-hidden flex flex-col justify-center items-start text-left bg-td-black border-b border-white/10"
     >
       {/* Dynamic Background Image */}
       <div className="absolute inset-0 z-0">
