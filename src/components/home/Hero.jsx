@@ -1,4 +1,5 @@
 import React from "react";
+import video from "../../assets/video.mp4";
 
 const Hero = () => {
   return (
@@ -9,12 +10,9 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-100 grayscale contrast-125"
+          className="w-full h-full object-cover"
         >
-          <source
-            src="https://www.pexels.com/download/video/3129977/"
-            type="video/mp4"
-          />
+          <source src={video} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
