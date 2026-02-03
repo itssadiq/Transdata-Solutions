@@ -10,7 +10,7 @@ const Services = () => {
   // Mobile Tap State
   const [clickedCard, setClickedCard] = useState(null);
 
-  // Drag Logic
+  // Drag Interaction Logic
   const handleMouseDown = (e) => {
     if (e.target.closest("button")) return;
     setIsDown(true);
@@ -145,7 +145,7 @@ const Services = () => {
           <div
             key={index}
             onClick={() => handleCardClick(index)}
-            className="group relative flex-none w-[85vw] md:w-100 h-100 md:h-100 [perspective:1000px]"
+            className="group relative flex-none w-[85vw] md:w-87.5 h-87.5 md:h-100 [perspective:1000px]"
           >
             {/* CARD INNER */}
             <div
@@ -161,7 +161,7 @@ const Services = () => {
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent pointer-events-none opacity-90"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none opacity-90"></div>
 
                 <div className="absolute inset-0 p-8 flex flex-col justify-between z-20">
                   <div className="flex justify-between items-start">
@@ -184,6 +184,7 @@ const Services = () => {
               </div>
 
               {/* === BACK FACE === */}
+              {/* Added [transform:rotateY(180deg)] to ensure it faces the 'back' of the 3D space initially */}
               <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0f0f0f] p-8 flex flex-col justify-center items-start rounded-sm border-2 border-td-yellow overflow-hidden">
                 <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-td-yellow/5 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -213,7 +214,7 @@ const Services = () => {
             </div>
           </div>
         ))}
-        <div className="min-w-50px"></div>
+        <div className="min-w-[50px]"></div>
       </div>
     </section>
   );
