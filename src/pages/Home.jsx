@@ -78,17 +78,17 @@ const Home = () => {
       {/* HERO SECTION */}
       <Hero />
 
-      {/* ABOUT US SECTION */}
-      <WhoWeAre />
-
-      {/* PARTNER MARQUEE */}
-      <Partners />
-
       {/* SERVICES */}
       <Services />
 
       {/* INDUSTRIES */}
       <Industries />
+
+      {/* PARTNER MARQUEE */}
+      <Partners />
+
+      {/* ABOUT US SECTION */}
+      <WhoWeAre />
 
       {/* INSIGHTS */}
       <Insights />
