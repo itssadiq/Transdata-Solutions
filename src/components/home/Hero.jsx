@@ -20,28 +20,29 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 w-full md:w-1/2 ml-0 md:ml-20">
         <div className="overflow-hidden mb-6">
           <p className="text-white/80 font-medium text-[11px] uppercase tracking-[0.4em] opacity-0 translate-y-4 animate-in">
-            Intelligent Infrastructure
+            Enterprise-Grade IT Solutions
           </p>
         </div>
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-white capitalize mb-8">
           <div className="overflow-hidden">
             <div className="hero-text-reveal translate-y-full opacity-0">
-              Tailored IT Services &
+              Building Reliable IT
             </div>
           </div>
           <div className="overflow-hidden">
             <div className="hero-text-reveal translate-y-full opacity-0">
-              Solution to <span className="text-td-yellow">Boost</span>
+              for Critical <span className="text-td-yellow">Business</span>
             </div>
           </div>
           <div className="overflow-hidden">
             <div className="hero-text-reveal translate-y-full opacity-0">
-              <span className="text-td-yellow">Your Business</span>
+              <span className="text-td-yellow">Operations</span>
             </div>
           </div>
         </h1>
         <p className="text-white/70 text-sm font-mono uppercase tracking-widest opacity-0 translate-y-4 animate-in">
-          Predict the future through AI & Machine Learning
+          Designing, deploying, and managing secure networks, cloud platforms,
+          and IT systems that businesses depend on every day.
         </p>
       </div>
 
