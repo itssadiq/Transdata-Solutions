@@ -11,6 +11,7 @@ import Industries from "../components/home/Industries";
 import Insights from "../components/home/Insights";
 import SocialPosts from "../components/home/SocialPosts";
 import Location from "../components/home/Location";
+import Stats from "../components/home/Stats";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,6 +79,8 @@ const Home = () => {
       {/* HERO SECTION */}
       <Hero />
 
+      {/* Stats Section */}
+      <Stats />
       {/* SERVICES */}
       <Services />
 
