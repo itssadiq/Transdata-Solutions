@@ -21,9 +21,9 @@ const Stats = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-24">
+    <section className="w-full bg-white py-16 md:py-20">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-0">
           {statsData.map((stat, index) => (
             <div
               key={index}
@@ -42,12 +42,12 @@ const Stats = () => {
               `}
             >
               {/* Highlight Text (Yellow) */}
-              <h3 className="text-4xl lg:text-3xl font-extrabold text-td-yellow leading-none mb-3">
+              <h4 className="text-2xl font-extrabold text-td-yellow leading-none mb-3">
                 {stat.highlight}
-              </h3>
+              </h4>
 
               {/* Remaining Text (Black) */}
-              <p className="text-black text-lg md:text-xl font-bold leading-tight max-w-[250px]">
+              <p className="text-black text-md font-bold leading-tight max-w-[250px]">
                 {stat.text}
               </p>
             </div>

@@ -4,7 +4,7 @@ const Partners = () => {
   return (
     <section
       id="partner-marquee"
-      className="py-12 bg-white border-b border-gray-100 overflow-hidden"
+      className="container mx-auto px-6 md:px-20 bg-white border-b border-gray-100 overflow-hidden"
     >
       <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">
         Trusted by Global Leaders

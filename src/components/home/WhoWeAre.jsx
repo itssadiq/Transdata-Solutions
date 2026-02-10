@@ -21,24 +21,32 @@ const WhoWeAre = () => {
             </video>
             <div className="absolute inset-0 bg-black/10"></div>
           </div>
-          <div className="lg:col-span-8 flex flex-col justify-between">
+          <div className="lg:col-span-8 flex flex-col">
             <div className="mb-8 reveal-up">
-              <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest">
+              <h2 className="text-lg font-bold text-td-yellow mb-4 uppercase tracking-widest">
                 01 // Who We Are
               </h2>
-              <h3 className="text-2xl md:text-3xl font-extrabold text-black leading-tight max-w-2xl">
-                With more than 12 years of experience, 350+ projects, and 265+
-                satisfied clients in 24 countries, Transdata Solutions is a
-                leading end-to-end digital solutions provider.
-              </h3>
+              {/* <h3 className="text-2xl md:text-2xl font-extrabold text-black leading-tight max-w-2xl">
+                Managing IT infrastructure requires consistency, security, and
+                predictable performance. Backed by 13+ years of industry
+                experience, Transdata Solutions supports IT teams by
+                implementing and managing enterprise-grade infrastructure,
+                cloud, cybersecurity, and managed services. The objective is
+                simple: stable systems, reduced operational risk, and IT
+                environments that scale without disruption.
+              </h3> */}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 reveal-up">
               <div>
                 <h4 className="text-lg font-bold mb-4">About Us</h4>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Transdata Solutions has been working diligently since 2013 to
-                  serve the IT sector throughout the UAE. Notably, we are
-                  passionate about delivering the best value IT products.
+                  Managing IT infrastructure requires consistency, security, and
+                  predictable performance. Backed by 13+ years of industry
+                  experience, Transdata Solutions supports IT teams by
+                  implementing and managing enterprise-grade infrastructure,
+                  cloud, cybersecurity, and managed services. The objective is
+                  simple: stable systems, reduced operational risk, and IT
+                  environments that scale without disruption.
                 </p>
                 <div
                   className={`relative overflow-hidden transition-all duration-700 ease-in-out ${isReadMoreOpen ? "max-h-125" : "max-h-12"}`}
@@ -60,7 +68,7 @@ const WhoWeAre = () => {
                 </div>
                 <button
                   onClick={() => setIsReadMoreOpen(!isReadMoreOpen)}
-                  className="mt-4 text-xs font-bold uppercase tracking-widest border-b-2 border-td-yellow pb-1 hover:text-td-yellow transition-colors"
+                  className="mt-4 text-xs font-bold uppercase tracking-widest border-b-2 border-td-yellow pb-1 hover:text-td-yellow transition-colors cursor-pointer"
                 >
                   {isReadMoreOpen ? "Show Less" : "Read More"}
                 </button>
