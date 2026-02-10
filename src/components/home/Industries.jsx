@@ -6,19 +6,21 @@ const Industries = () => {
       id="industries"
       className="bg-white py-24 border-t border-gray-100"
     >
+      {/* Header - Styled exactly like Services section */}
       <div className="container mx-auto px-6 md:px-20 mb-20">
-        <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
-          <span className="w-8 h-0.5 bg-black"></span> 03 // Sectors
+        <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-widest flex items-center gap-3">
+        <span className="w-8 h-0.5 bg-td-yellow"></span> // Sectors
         </h2>
-        <div className="flex flex-col md:flex-row justify-between items-end gap-10">
-          <h3 className="text-5xl md:text-6xl font-black text-black leading-tight">
+        <div className="max-w-4xl">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6 leading-tight">
+            Experience Across <br className="hidden md:block" /> Multiple
             Industries
-            <br />
-            We Empower
           </h3>
-          <p className="text-gray-500 max-w-md text-sm leading-relaxed mb-2">
-            Leveraging deep domain expertise to engineer solutions that address
-            the specific challenges of your sector.
+          <p className="text-black/70 text-lg md:text-lg font-medium leading-relaxed max-w-3xl">
+            Over the years, we’ve worked with organizations across construction,
+            hospitality, healthcare, and other industries. Each sector has
+            different operational and IT challenges, and our experience helps us
+            understand what actually works on the ground—not just in theory.
           </p>
         </div>
       </div>
@@ -58,7 +60,7 @@ const Industries = () => {
             },
           ].map((ind, i) => (
             <div key={i} className="group flex flex-col gap-6">
-              <div className="relative overflow-hidden rounded-md aspect-4/3 w-full bg-gray-100">
+              <div className="relative overflow-hidden rounded-md aspect-[4/3] w-full bg-gray-100">
                 <img
                   src={ind.img}
                   loading="lazy"

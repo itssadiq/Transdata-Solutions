@@ -129,6 +129,12 @@ const Hero = () => {
           Industries
         </a>
         <a
+          href="#contact"
+          className="text-white font-sans font-semibold text-xs opacity-70 uppercase tracking-widest transition-all duration-300 hover:opacity-100 hover:-translate-x-1 hover:text-td-yellow"
+        >
+          Contact
+        </a>
+        <a
           href="#insights"
           className="text-white font-sans font-semibold text-xs opacity-70 uppercase tracking-widest transition-all duration-300 hover:opacity-100 hover:-translate-x-1 hover:text-td-yellow"
         >
@@ -141,16 +147,10 @@ const Hero = () => {
           FAQ's
         </a>
         <a
-          href="#location"
+          href="#social-slider"
           className="text-white font-sans font-semibold text-xs opacity-70 uppercase tracking-widest transition-all duration-300 hover:opacity-100 hover:-translate-x-1 hover:text-td-yellow"
         >
-          Our Office
-        </a>
-        <a
-          href="#contact"
-          className="text-white font-sans font-semibold text-xs opacity-70 uppercase tracking-widest transition-all duration-300 hover:opacity-100 hover:-translate-x-1 hover:text-td-yellow"
-        >
-          Contact
+          Posts
         </a>
       </div>
 

@@ -24,7 +24,7 @@ const WhoWeAre = () => {
           <div className="lg:col-span-8 flex flex-col">
             <div className="mb-8 reveal-up">
               <h2 className="text-lg font-bold text-td-yellow mb-4 uppercase tracking-widest">
-                01 // Who We Are
+                // Who We Are
               </h2>
               {/* <h3 className="text-2xl md:text-2xl font-extrabold text-black leading-tight max-w-2xl">
                 Managing IT infrastructure requires consistency, security, and

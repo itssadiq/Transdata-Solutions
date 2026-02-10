@@ -108,18 +108,25 @@ const Services = () => {
       id="services-drag"
       className="bg-gray-50 py-24 overflow-hidden border-b border-gray-200"
     >
-      {/* Header */}
-      <div className="container mx-auto px-6 md:px-20 mb-8 flex flex-col md:flex-row justify-between items-end reveal-up">
-        <div>
-          <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-widest flex items-center gap-3">
-            <span class="w-8 h-0.5 bg-td-yellow"></span> 02 // Capabilities
-          </h2>
-          <h3 className="text-5xl font-bold text-black">Core Services</h3>
+      {/* Header - Updated with new Headline & Subheadline */}
+      <div className="container mx-auto px-6 md:px-20 mb-12 reveal-up">
+        <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-widest flex items-center gap-3">
+          <span className="w-8 h-0.5 bg-td-yellow"></span> // Capabilities
+        </h2>
+        <div className="max-w-4xl">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6 leading-tight">
+            End-to-End IT Solutions <br className="hidden md:block" /> Under One
+            Roof
+          </h3>
+          <p className="text-black/70 text-lg md:text-lg font-medium leading-relaxed max-w-3xl">
+            From strategy to support, we deliver complete IT solutions designed
+            for reliability, security, and scalability.
+          </p>
         </div>
       </div>
 
       {/* Visual Scroll Guide */}
-      <div className="container mx-auto px-6 md:px-20 mb-10 reveal-up">
+      <div className="container mx-auto px-6 mb-10 md:px-20 reveal-up">
         <div className="flex items-center gap-4 opacity-50">
           <div className="h-px bg-gray-400 w-16"></div>
           <div className="text-2xl animate-hand-guide">☞</div>

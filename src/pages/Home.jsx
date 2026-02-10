@@ -10,10 +10,9 @@ import Services from "../components/home/Services";
 import Industries from "../components/home/Industries";
 import Insights from "../components/home/Insights";
 import SocialPosts from "../components/home/SocialPosts";
-import Location from "../components/home/Location";
 import Stats from "../components/home/Stats";
-import ContactForm from "../components/contact/Form";
 import ContactGrid from "../components/contact/ContactGrid";
+import quote from "../assets/Quote-part.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,8 +89,17 @@ const Home = () => {
       {/* SERVICES */}
       <Services />
 
+      <img
+        src={quote}
+        alt=""
+        className="md:w-[85%] mx-auto rounded-2xl px-2 md:px-0"
+      />
+
       {/* INDUSTRIES */}
       <Industries />
+
+      {/* Contact Form */}
+      <ContactGrid />
 
       {/* PARTNER MARQUEE */}
       <Partners />
@@ -101,11 +109,6 @@ const Home = () => {
 
       {/* SOCIAL HUB */}
       <SocialPosts />
-
-      <Location />
-
-      {/* Contact Form */}
-      <ContactGrid />
     </div>
   );
 };
