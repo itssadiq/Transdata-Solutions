@@ -27,149 +27,101 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  // Unified Data
+  // Updated Unified Data - 6 Services
   const solutionsData = [
     {
-      id: "infrastructure",
-      title: "Infrastructure Solutions",
-      items: [
-        {
-          name: "Server Farms",
-          link: "/services/infrastructure-solutions",
-          img: "https://images.unsplash.com/photo-1622548066678-a25ead9d3849?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        },
-        {
-          name: "Edge Computing",
-          link: "/services/infrastructure-solutions",
-          img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400",
-        },
-      ],
-    },
-    {
-      id: "cloud",
-      title: "Cloud Solutions",
-      items: [
-        {
-          name: "Cloud Migration",
-          link: "/services/cloud-solutions",
-          img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400",
-        },
-        {
-          name: "Hybrid Cloud",
-          link: "/services/cloud-solutions",
-          img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=400",
-        },
-      ],
-    },
-    {
-      id: "managed",
-      title: "IT Managed Services",
+      id: "managed-it",
+      title: "Managed IT Services",
       items: [
         {
           name: "24/7 NOC Support",
-          link: "/services/it-managed-services",
+          link: "/services/managed-it-services",
           img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400",
         },
         {
-          name: "System Health",
-          link: "/services/it-managed-services",
+          name: "IT Support",
+          link: "/services/managed-it-services",
           img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400",
         },
       ],
     },
     {
-      id: "data",
-      title: "Data Management",
+      id: "datacenter",
+      title: "IT Datacenter Solutions",
       items: [
         {
-          name: "Data Warehousing",
-          link: "/services/data-management",
-          img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
+          name: "Racking & Cooling",
+          link: "/services/it-datacenter-solutions",
+          img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400",
         },
         {
-          name: "Governance",
-          link: "/services/data-management",
-          img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=400",
+          name: "Power Management",
+          link: "/services/it-datacenter-solutions",
+          img: "https://images.unsplash.com/photo-1622548066678-a25ead9d3849?q=80&w=400",
         },
       ],
     },
     {
-      id: "security",
-      title: "Cybersecurity Solutions",
+      id: "networking",
+      title: "Networking & Switching",
       items: [
         {
-          name: "Zero Trust Arch",
-          link: "/services/cybersecurity-solutions",
+          name: "Enterprise Switching",
+          link: "/services/networking-switching",
+          img: "https://images.unsplash.com/photo-1546124404-9e7e3cac2ec1?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Wireless Infra",
+          link: "/services/networking-switching",
+          img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=400",
+        },
+      ],
+    },
+    {
+      id: "cybersecurity",
+      title: "Cyber Security Services",
+      items: [
+        {
+          name: "Threat Detection",
+          link: "/services/cyber-security-services",
           img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=400",
         },
         {
-          name: "Threat Detection",
-          link: "/services/cybersecurity-solutions",
+          name: "Security Compliance",
+          link: "/services/cyber-security-services",
           img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400",
         },
       ],
     },
     {
-      id: "digital",
-      title: "Digital Transformation",
+      id: "backup",
+      title: "Data Backup & Protection",
       items: [
         {
-          name: "Process Automation",
-          link: "/services/digital-transformation",
-          img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400",
+          name: "Disaster Recovery",
+          link: "/services/data-backup-protection",
+          img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
         },
         {
-          name: "AI Workflows",
-          link: "/services/digital-transformation",
-          img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400",
+          name: "Automated Backup",
+          link: "/services/data-backup-protection",
+          img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=400",
         },
       ],
     },
     {
-      id: "collaboration",
-      title: "Collaboration Solutions",
+      id: "communication",
+      title: "Communication & LV",
       items: [
         {
           name: "Unified Comms",
-          link: "/services/collaboration-solutions",
+          link: "/services/communication-lv",
           img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400",
         },
         {
-          name: "Video Conferencing",
-          link: "/services/collaboration-solutions",
+          name: "LV Cabling",
+          link: "/services/communication-lv",
           img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400",
-        },
-      ],
-    },
-    {
-      id: "business",
-      title: "Business Applications",
-      items: [
-        {
-          name: "ERP Systems",
-          link: "/services/business-applications",
-          img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400",
-        },
-        {
-          name: "CRM Integration",
-          link: "/services/business-applications",
-          img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=400",
-        },
-      ],
-    },
-    {
-      id: "emerging",
-      title: "Emerging Technologies",
-      items: [
-        {
-          name: "IoT Sensors",
-          link: "/services/emerging-technologies",
-          img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400",
-        },
-        {
-          name: "Blockchain",
-          link: "/services/emerging-technologies",
-          img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=400",
         },
       ],
     },

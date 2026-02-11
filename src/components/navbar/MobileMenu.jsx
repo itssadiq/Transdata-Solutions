@@ -16,10 +16,13 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
   const [activeMobileCategory, setActiveMobileCategory] = useState(null);
 
   const mobileLinkClass = ({ isActive }) =>
-    `block text-2xl font-bold border-b border-gray-100 pb-4 ${isActive ? "text-td-yellow" : "text-black"}`;
+    `block text-2xl font-bold border-b border-gray-100 pb-4 ${
+      isActive ? "text-td-yellow" : "text-black"
+    }`;
 
   return (
     <>
+      {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black/60 backdrop-blur-md z-[60] transition-opacity duration-300 ${
           isOpen
@@ -29,15 +32,17 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
         onClick={onClose}
       />
 
+      {/* Sidebar Panel */}
       <div
         className={`fixed top-0 right-0 h-full w-[85%] max-w-[400px] bg-white z-[70] shadow-2xl transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Header */}
         <div className="flex justify-between items-center p-6 border-b border-gray-100">
           <img
             src="/LOGO_1.png"
-            alt="Logo"
+            alt="TransData Logo"
             className="w-[120px] object-contain invert brightness-0"
           />
           <button
@@ -48,6 +53,7 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
           </button>
         </div>
 
+        {/* Navigation Links */}
         <div className="flex-1 overflow-y-auto py-8 px-6 space-y-6">
           <NavLink to="/" className={mobileLinkClass} onClick={onClose}>
             Home
@@ -59,7 +65,9 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
               <NavLink
                 to="/solutions"
                 className={({ isActive }) =>
-                  `text-2xl font-bold ${isActive ? "text-td-yellow" : "text-black"}`
+                  `text-2xl font-bold ${
+                    isActive ? "text-td-yellow" : "text-black"
+                  }`
                 }
                 onClick={onClose}
               >
@@ -76,33 +84,43 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
               </button>
             </div>
 
-            {/* Main Dropdown Animation */}
+            {/* Accordion Content */}
             <div
-              className={`transition-all duration-500 ease-in-out overflow-hidden ${isSolutionsExpanded ? "max-h-[2000px] opacity-100 mt-4" : "max-h-0 opacity-0"}`}
+              className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                isSolutionsExpanded
+                  ? "max-h-[2000px] opacity-100 mt-4"
+                  : "max-h-0 opacity-0"
+              }`}
             >
               <div className="pl-2 space-y-4">
                 {solutionsData.map((cat) => {
-                  const isOpen = activeMobileCategory === cat.id;
+                  const isCatOpen = activeMobileCategory === cat.id;
                   return (
                     <div
                       key={cat.id}
-                      className={`rounded-md overflow-hidden border border-gray-100 transition-all duration-300 ${isOpen ? "bg-gray-50 shadow-sm" : "bg-white"}`}
+                      className={`rounded-md overflow-hidden border border-gray-100 transition-all duration-300 ${
+                        isCatOpen ? "bg-gray-50 shadow-sm" : "bg-white"
+                      }`}
                     >
                       <button
                         onClick={() =>
-                          setActiveMobileCategory(isOpen ? null : cat.id)
+                          setActiveMobileCategory(isCatOpen ? null : cat.id)
                         }
                         className="w-full text-left p-4 text-lg font-bold flex justify-between items-center text-gray-800"
                       >
                         {cat.title}
                         <ChevronDown
                           size={18}
-                          className={`transition-transform duration-300 ${isOpen ? "rotate-180 text-td-yellow" : "text-gray-400"}`}
+                          className={`transition-transform duration-300 ${
+                            isCatOpen
+                              ? "rotate-180 text-td-yellow"
+                              : "text-gray-400"
+                          }`}
                         />
                       </button>
 
-                      {/* Inner Items - Simple Conditional Rendering for Stability */}
-                      {isOpen && (
+                      {/* Sub-items Grid */}
+                      {isCatOpen && (
                         <div className="p-4 space-y-4 bg-white border-t border-gray-100">
                           {cat.items.map((item, idx) => (
                             <NavLink
@@ -115,7 +133,7 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
                                 <img
                                   src={item.img}
                                   className="w-full h-full object-cover"
-                                  alt=""
+                                  alt={item.name}
                                 />
                               </div>
                               <p className="text-sm font-bold text-gray-600 group-hover:text-black transition-colors">
@@ -140,6 +158,7 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
           </NavLink>
         </div>
 
+        {/* Footer / Socials */}
         <div className="p-8 bg-gray-50 border-t border-gray-100">
           <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-6">
             Follow Us

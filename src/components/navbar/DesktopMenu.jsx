@@ -4,7 +4,8 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 
 const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState("infrastructure");
+  // Updated default state to match new ID structure
+  const [activeCategory, setActiveCategory] = useState("managed-it");
   const location = useLocation();
 
   const activeCategoryData = solutionsData.find((c) => c.id === activeCategory);
@@ -73,7 +74,7 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
               {activeCategoryData?.title}
             </h4>
 
-            {/* Grid Container - Added padding bottom to prevent cutoff */}
+            {/* Grid Container */}
             <div
               key={activeCategory}
               className="grid grid-cols-2 gap-6 pb-10 animate-pulse-once"
