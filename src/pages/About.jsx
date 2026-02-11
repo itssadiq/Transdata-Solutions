@@ -5,6 +5,7 @@ import OurStory from "../components/about/OurStory";
 import Mission from "../components/about/Mission";
 import CoreValues from "../components/about/CoreValues";
 import PageHero from "../components/PageHero";
+import Process from "../components/about/Process";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,6 +76,8 @@ const About = () => {
 
       {/* MISSION & VISION */}
       <Mission />
+
+      <Process />
 
       {/* CORE VALUES */}
       <CoreValues />
