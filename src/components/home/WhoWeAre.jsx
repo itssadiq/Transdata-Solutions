@@ -9,7 +9,7 @@ const WhoWeAre = () => {
       className="py-20 md:py-24 bg-white border-b border-gray-100"
     >
       {/* Container locked to 1400px framework */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Side: Video */}
           <div className="lg:col-span-4 h-100 bg-gray-100 relative overflow-hidden rounded-md reveal-up">

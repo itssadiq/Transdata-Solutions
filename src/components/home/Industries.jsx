@@ -73,7 +73,7 @@ const Industries = () => {
       className="bg-white py-20 md:py-24 border-t border-gray-100"
     >
       {/* 1. Main Site Wrapper (Locked to 1400px Symmetry) */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-20">
         {/* Header Section */}
         <div className="mb-16 md:mb-20">
           <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest flex items-center gap-3">

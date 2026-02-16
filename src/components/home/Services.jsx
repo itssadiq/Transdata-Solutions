@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const Services = () => {
@@ -7,6 +7,15 @@ const Services = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [clickedCard, setClickedCard] = useState(null);
+
+  // Hook to handle responsive calculation for the cards start line
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleMouseDown = (e) => {
     if (e.target.closest("button")) return;
@@ -84,7 +93,7 @@ const Services = () => {
       className="bg-gray-50 py-20 md:py-24 overflow-hidden border-b border-gray-200"
     >
       {/* Symmetrical Header Container */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 mb-12 reveal-up">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-20 mb-12 reveal-up">
         <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest flex items-center gap-3">
           <span className="w-8 h-0.5 bg-td-yellow"></span> // Capabilities
         </h2>
@@ -101,7 +110,7 @@ const Services = () => {
       </div>
 
       {/* Symmetrical Visual Scroll Guide */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 mb-10 reveal-up">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-20 mb-10 reveal-up">
         <div className="flex items-center gap-4 opacity-50">
           <div className="h-px bg-gray-400 w-16"></div>
           <div className="text-2xl animate-hand-guide">☞</div>
@@ -111,15 +120,19 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Cards Container - Calculated pl to match headline symmetry */}
+      {/* Cards Container - Calculated pl to perfectly match the px-6/px-20 header alignment */}
       <div
         ref={servicesRef}
         className={`flex gap-6 md:gap-8 overflow-x-auto pb-16 pt-4 cursor-grab no-scrollbar select-none ${
           isDown ? "active cursor-grabbing" : ""
         }`}
         style={{
-          // This calculation ensures the cards start aligned with the 1400px container's left edge
-          paddingLeft: "calc(max(1.5rem, (100vw - 1400px) / 2 + 2.5rem))",
+          // On mobile: px-6 (1.5rem). On desktop: px-20 (5rem).
+          // Beyond 1400px: (100vw - 1400px) / 2 + the base padding.
+          paddingLeft: isMobile
+            ? "1.5rem"
+            : "calc(max(5rem, (100vw - 1400px) / 2 + 5rem))",
+          paddingRight: isMobile ? "1.5rem" : "5rem",
         }}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
@@ -213,8 +226,8 @@ const Services = () => {
             </div>
           );
         })}
-        {/* Right side padding to allow final card to clear edge */}
-        <div className="min-w-[50px] md:min-w-[200px]"></div>
+        {/* Transparent spacer to prevent final card from sticking to the edge */}
+        <div className="min-w-[50px]"></div>
       </div>
     </section>
   );
