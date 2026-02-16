@@ -1,5 +1,17 @@
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import Hospitatlity from "../../assets/hospitality.jpg";
+import Aviation from "../../assets/aviation.jpeg";
+import Insurance from "../../assets/insurance.jpg";
+import Restaurants from "../../assets/restaurants.jpg";
+import Construction from "../../assets/construction.jpg";
+import Banking from "../../assets/banking.jpg";
+import Retail from "../../assets/retail.jpg";
+import Healthcare from "../../assets/healthcare.jpg";
+import Realestate from "../../assets/real-estate.jpg";
+import OilGas from "../../assets/oil-gas.jpg";
+import Logistics from "../../assets/logistics.jpg";
+import Education from "../../assets/education.jpg";
 
 const Industries = () => {
   const [showAll, setShowAll] = useState(false);
@@ -8,62 +20,62 @@ const Industries = () => {
     {
       title: "Hospitality",
       desc: "Guest Wi-Fi, property management systems, and secure hotel infrastructure.",
-      img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+      img: Hospitatlity,
     },
     {
       title: "Aviation",
       desc: "Mission-critical communication networks and secure ground data transmission.",
-      img: "https://images.pexels.com/photos/36095512/pexels-photo-36095512.jpeg",
+      img: Aviation,
     },
     {
       title: "Insurance",
       desc: "Robust security frameworks and cloud-based document management systems.",
-      img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800",
+      img: Insurance,
     },
     {
       title: "Restaurants",
       desc: "Smart POS systems, kitchen displays, and cloud inventory management.",
-      img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800",
+      img: Restaurants,
     },
     {
       title: "Construction",
       desc: "Remote site connectivity, BIM infrastructure, and rugged networking.",
-      img: "https://images.pexels.com/photos/2383650/pexels-photo-2383650.jpeg",
+      img: Construction,
     },
     {
       title: "Banking",
       desc: "Enterprise-grade security, redundant data centers, and zero-trust architectures.",
-      img: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=800",
+      img: Banking,
     },
     {
       title: "Retail",
       desc: "Omnichannel tracking, secure gateways, and high-availability retail networks.",
-      img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800",
+      img: Retail,
     },
     {
       title: "Healthcare",
       desc: "HIPAA-compliant protection and electronic records digitization.",
-      img: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=800",
+      img: Healthcare,
     },
     {
       title: "Real Estate",
       desc: "Smart building automation and secure virtual tour infrastructure.",
-      img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800",
+      img: Realestate,
     },
     {
       title: "Oil & Gas",
       desc: "IoT sensors and rugged communication systems for harsh environments.",
-      img: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800",
+      img: OilGas,
     },
     {
       title: "Logistics",
       desc: "Real-time supply chain visibility and automated warehousing systems.",
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
+      img: Logistics,
     },
     {
       title: "Education",
       desc: "Campus-wide high-speed Wi-Fi and digital collaboration tools.",
-      img: "https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?q=80&w=800",
+      img: Education,
     },
   ];
 
