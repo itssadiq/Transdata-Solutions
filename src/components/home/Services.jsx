@@ -1,5 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
+import managedIt from "../../assets/It-services.jpeg";
+import Datacenter from "../../assets/data-center.jpg";
+import Networking from "../../assets/networking-switching.jpeg";
+import CyberSecurity from "../../assets/cybersecurity.avif";
+import DataBackup from "../../assets/data-backup.avif";
+import CommunicationLV from "../../assets/communication.avif";
 
 const Services = () => {
   const servicesRef = useRef(null);
@@ -47,42 +53,42 @@ const Services = () => {
       id: "01",
       title: "Managed IT",
       subtitle: "Services",
-      img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+      img: managedIt,
       desc: "Comprehensive IT management including 24/7 monitoring, helpdesk support, and proactive maintenance to ensure your operations never miss a beat.",
     },
     {
       id: "02",
       title: "IT Datacenter",
       subtitle: "Solutions",
-      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+      img: Datacenter,
       desc: "End-to-end data center design, precision cooling, power management, and racking solutions built for high-density and mission-critical environments.",
     },
     {
       id: "03",
       title: "Networking &",
       subtitle: "Switching",
-      img: "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg",
+      img: Networking,
       desc: "Designing robust network architectures with enterprise-grade switching, routing, and wireless infrastructure to ensure seamless connectivity.",
     },
     {
       id: "04",
       title: "Cyber Security",
       subtitle: "Services",
-      img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+      img: CyberSecurity,
       desc: "Advanced threat protection, zero-trust architectures, and compliance strategies to safeguard your digital assets against evolving cyber threats.",
     },
     {
       id: "05",
       title: "Data Backup &",
       subtitle: "Protection",
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+      img: DataBackup,
       desc: "Resilient disaster recovery planning and automated backup solutions that ensure business continuity and data integrity in any scenario.",
     },
     {
       id: "06",
       title: "Communication",
       subtitle: "& LV",
-      img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+      img: CommunicationLV,
       desc: "Unified communication systems combined with structured Low Voltage (LV) cabling solutions for smart building automation and connectivity.",
     },
   ];
