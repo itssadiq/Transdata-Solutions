@@ -22,7 +22,6 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black/60 backdrop-blur-md z-[60] transition-opacity duration-300 ${
           isOpen
@@ -32,13 +31,11 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
         onClick={onClose}
       />
 
-      {/* Sidebar Panel */}
       <div
         className={`fixed top-0 right-0 h-full w-[85%] max-w-[400px] bg-white z-[70] shadow-2xl transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Header */}
         <div className="flex justify-between items-center p-6 border-b border-gray-100">
           <img
             src="/LOGO_1.png"
@@ -53,13 +50,11 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
           </button>
         </div>
 
-        {/* Navigation Links */}
         <div className="flex-1 overflow-y-auto py-8 px-6 space-y-6">
           <NavLink to="/" className={mobileLinkClass} onClick={onClose}>
             Home
           </NavLink>
 
-          {/* SOLUTIONS ACCORDION */}
           <div className="border-b border-gray-100 pb-4">
             <div className="flex justify-between items-center pb-2">
               <NavLink
@@ -84,7 +79,6 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
               </button>
             </div>
 
-            {/* Accordion Content */}
             <div
               className={`transition-all duration-500 ease-in-out overflow-hidden ${
                 isSolutionsExpanded
@@ -119,7 +113,6 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
                         />
                       </button>
 
-                      {/* Sub-items Grid */}
                       {isCatOpen && (
                         <div className="p-4 space-y-4 bg-white border-t border-gray-100">
                           {cat.items.map((item, idx) => (
@@ -158,7 +151,6 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
           </NavLink>
         </div>
 
-        {/* Footer / Socials */}
         <div className="p-8 bg-gray-50 border-t border-gray-100">
           <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-6">
             Follow Us

@@ -32,7 +32,7 @@ const WhoWeAre = () => {
           <div className="lg:col-span-8 flex flex-col justify-center">
             <div className="mb-8 reveal-up">
               <h2 className="text-lg font-bold text-td-yellow mb-4 uppercase tracking-widest">
-                // Who We Are
+                Who We Are
               </h2>
             </div>
 

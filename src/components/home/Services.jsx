@@ -95,7 +95,7 @@ const Services = () => {
       {/* Symmetrical Header Container */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-20 mb-12 reveal-up">
         <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest flex items-center gap-3">
-          <span className="w-8 h-0.5 bg-td-yellow"></span> // Capabilities
+          <span className="w-8 h-0.5 bg-td-yellow"></span> Capabilities
         </h2>
         <div className="max-w-4xl">
           <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6 leading-tight">

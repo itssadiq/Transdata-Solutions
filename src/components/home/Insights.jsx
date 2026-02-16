@@ -38,8 +38,8 @@ const Insights = () => {
       id="insights"
       className="py-24 bg-white container mx-auto px-6 md:px-20 reveal-up border-b border-gray-100"
     >
-      <h2 className="text-xs font-bold text-black mb-16 uppercase tracking-widest flex items-center gap-3">
-        <span className="w-8 h-0.5 bg-td-yellow"></span> // Insights
+      <h2 className="text-xs font-bold text-td-yellow mb-16 uppercase tracking-widest flex items-center gap-3">
+        <span className="w-8 h-0.5 bg-td-yellow"></span> Insights
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
         {/* Testimonials */}

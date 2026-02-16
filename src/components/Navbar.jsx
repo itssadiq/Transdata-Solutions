@@ -27,7 +27,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  // Updated Unified Data - 6 Services
   const solutionsData = [
     {
       id: "managed-it",
@@ -128,55 +127,62 @@ const Navbar = () => {
   ];
 
   const linkClass = ({ isActive }) =>
-    `font-bold text-[0.75rem] uppercase tracking-widest transition-colors duration-300 hover:text-td-yellow ${
+    `font-bold text-[0.75rem] uppercase tracking-widest transition-all duration-500 hover:text-td-yellow ${
       isActive ? "text-td-yellow" : scrolled ? "text-black" : "text-white"
     }`;
 
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-50 px-6 md:px-8 py-3 flex justify-between items-center border-b border-white/10 transition-all duration-300 group ${scrolled ? "bg-white border-gray-200 shadow-sm py-2" : ""}`}
+        className={`fixed top-0 w-full z-50 px-6 md:px-8 flex justify-between items-center border-b border-white/10 transition-all duration-500 ease-in-out group ${
+          scrolled ? "bg-white border-gray-200 shadow-sm py-2" : "py-3"
+        }`}
       >
-        {/* LOGO */}
         <NavLink to="/" className="z-50 relative">
           <img
             src={Logo}
             alt="TransData"
-            className={`w-[140px] md:w-[180px] object-contain transition-[filter] duration-300 ${scrolled ? "brightness-100 invert-0" : "brightness-0 invert"}`}
+            className={`object-contain transition-all duration-500 ${
+              scrolled
+                ? "w-[120px] md:w-[150px] brightness-100 invert-0"
+                : "w-[140px] md:w-[180px] brightness-0 invert"
+            }`}
           />
         </NavLink>
 
-        {/* DESKTOP MENU COMPONENT */}
         <DesktopMenu
           scrolled={scrolled}
           solutionsData={solutionsData}
           linkClass={linkClass}
         />
 
-        {/* DESKTOP RIGHT (CONTACT) */}
         <div
           className={`hidden md:flex items-center gap-6 ${scrolled ? "text-black" : "text-white"}`}
         >
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `text-[0.7rem] font-bold uppercase tracking-widest px-5 py-2.5 rounded-sm transition-colors ${isActive ? "bg-td-yellow text-black" : scrolled ? "bg-black text-white hover:bg-td-yellow hover:text-black" : "bg-white text-black hover:bg-td-yellow hover:text-black"}`
+              `text-[0.7rem] font-bold uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all duration-500 ${
+                isActive
+                  ? "bg-td-yellow text-black"
+                  : scrolled
+                    ? "bg-black text-white hover:bg-td-yellow hover:text-black"
+                    : "bg-white text-black hover:bg-td-yellow hover:text-black"
+              }`
             }
           >
             Contact Us
           </NavLink>
         </div>
 
-        {/* MOBILE TOGGLE */}
         <button
-          className={`md:hidden z-50 ${scrolled ? "text-black" : "text-white"}`}
+          className={`md:hidden z-50 transition-colors duration-500 ${scrolled ? "text-black" : "text-white"}`}
           onClick={() => setIsMobileMenuOpen(true)}
         >
           <Menu size={28} />
         </button>
       </nav>
 
-      {/* MOBILE MENU COMPONENT */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
