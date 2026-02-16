@@ -41,7 +41,7 @@ const WhoWeAre = () => {
                 <h4 className="text-lg font-bold mb-4 border-b-2 border-td-yellow inline-block pb-1">
                   About Us
                 </h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text:lg md:text-sm leading-relaxed mb-4">
                   Managing IT infrastructure requires consistency, security, and
                   predictable performance. Backed by 13+ years of industry
                   experience, Transdata Solutions supports IT teams by
@@ -56,13 +56,13 @@ const WhoWeAre = () => {
                     isReadMoreOpen ? "max-h-125" : "max-h-12"
                   }`}
                 >
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text:lg md:text-sm leading-relaxed mb-4">
                     As a technology consulting company, Transdata Solutions
                     caters to all types of organizations at each level. We
                     firmly believe that we have built an organization uniquely
                     equipped for this task.
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text:lg md:text-sm leading-relaxed">
                     Furthermore, Transdata Solutions holds the perfect expertise
                     and knowledge to find the best combination when it comes to
                     product configuration for our clients.
@@ -86,7 +86,7 @@ const WhoWeAre = () => {
                 <h4 className="text-lg font-bold mb-4 border-b-2 border-td-yellow inline-block pb-1">
                   Our Mission
                 </h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text:lg md:text-sm leading-relaxed">
                   To empower businesses through innovative technology, providing
                   reliable, scalable, and secure IT infrastructure that drives
                   growth and operational excellence.

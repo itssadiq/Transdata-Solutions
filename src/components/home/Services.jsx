@@ -85,7 +85,7 @@ const Services = () => {
     >
       {/* Symmetrical Header Container */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 mb-12 reveal-up">
-        <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-widest flex items-center gap-3">
+        <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest flex items-center gap-3">
           <span className="w-8 h-0.5 bg-td-yellow"></span> // Capabilities
         </h2>
         <div className="max-w-4xl">
@@ -93,7 +93,7 @@ const Services = () => {
             End-to-End IT Solutions <br className="hidden md:block" /> Under One
             Roof
           </h3>
-          <p className="text-black/70 text-lg md:text-lg font-medium leading-relaxed max-w-3xl">
+          <p className="text-black/70 text-lg md:text-lg font-medium leading-relaxed md:max-w-xl">
             From strategy to support, we deliver complete IT solutions designed
             for reliability, security, and scalability.
           </p>

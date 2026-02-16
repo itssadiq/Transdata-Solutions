@@ -12,7 +12,7 @@ import Insights from "../components/home/Insights";
 import SocialPosts from "../components/home/SocialPosts";
 import Stats from "../components/home/Stats";
 import ContactGrid from "../components/contact/ContactGrid";
-import quote from "../assets/Quote-part.png";
+import Quote from "../components/home/Quote";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,11 +89,8 @@ const Home = () => {
       {/* SERVICES */}
       <Services />
 
-      <img
-        src={quote}
-        alt=""
-        className="md:w-[85%] mx-auto rounded-2xl px-2 md:px-0"
-      />
+      {/* Standardized Quote Section */}
+      <Quote />
 
       {/* INDUSTRIES */}
       <Industries />
