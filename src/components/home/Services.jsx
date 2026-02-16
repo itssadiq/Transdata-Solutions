@@ -6,11 +6,8 @@ const Services = () => {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-
-  // Mobile Tap State
   const [clickedCard, setClickedCard] = useState(null);
 
-  // Drag Interaction Logic
   const handleMouseDown = (e) => {
     if (e.target.closest("button")) return;
     setIsDown(true);
@@ -27,7 +24,6 @@ const Services = () => {
     servicesRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  // Mobile Tap Logic
   const handleCardClick = (index) => {
     if (Math.abs(startX - (startX + 1)) > 5 && isDown) return;
     if (clickedCard === index) {
@@ -37,7 +33,6 @@ const Services = () => {
     }
   };
 
-  // Updated Services List (6 Items)
   const services = [
     {
       id: "01",
@@ -86,10 +81,10 @@ const Services = () => {
   return (
     <section
       id="services-drag"
-      className="bg-gray-50 py-24 overflow-hidden border-b border-gray-200"
+      className="bg-gray-50 py-20 md:py-24 overflow-hidden border-b border-gray-200"
     >
-      {/* Header - Updated with new Headline & Subheadline */}
-      <div className="container mx-auto px-6 md:px-20 mb-12 reveal-up">
+      {/* Symmetrical Header Container */}
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 mb-12 reveal-up">
         <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-widest flex items-center gap-3">
           <span className="w-8 h-0.5 bg-td-yellow"></span> // Capabilities
         </h2>
@@ -105,8 +100,8 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Visual Scroll Guide */}
-      <div className="container mx-auto px-6 mb-10 md:px-20 reveal-up">
+      {/* Symmetrical Visual Scroll Guide */}
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 mb-10 reveal-up">
         <div className="flex items-center gap-4 opacity-50">
           <div className="h-px bg-gray-400 w-16"></div>
           <div className="text-2xl animate-hand-guide">☞</div>
@@ -116,12 +111,16 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Cards Container */}
+      {/* Cards Container - Calculated pl to match headline symmetry */}
       <div
         ref={servicesRef}
-        className={`flex gap-6 md:gap-8 overflow-x-auto pb-16 pt-4 px-6 md:px-20 cursor-grab no-scrollbar select-none ${
+        className={`flex gap-6 md:gap-8 overflow-x-auto pb-16 pt-4 cursor-grab no-scrollbar select-none ${
           isDown ? "active cursor-grabbing" : ""
         }`}
+        style={{
+          // This calculation ensures the cards start aligned with the 1400px container's left edge
+          paddingLeft: "calc(max(1.5rem, (100vw - 1400px) / 2 + 2.5rem))",
+        }}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
@@ -131,25 +130,22 @@ const Services = () => {
           const isFlipped = clickedCard === index;
 
           return (
-            // CARD WRAPPER
             <div
               key={index}
               onClick={() => handleCardClick(index)}
               className="group relative flex-none w-[85vw] md:w-[350px] h-[420px] md:h-[460px] [perspective:1000px]"
             >
-              {/* CARD INNER */}
               <div
                 className={`relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] shadow-xl group-hover:shadow-2xl 
                 ${isFlipped ? "[transform:rotateY(180deg)]" : "group-hover:[transform:rotateY(180deg)]"}`}
               >
-                {/* === FRONT FACE === */}
+                {/* FRONT FACE */}
                 <div
                   className={`absolute inset-0 w-full h-full [backface-visibility:hidden] bg-black rounded-sm overflow-hidden transition-opacity duration-300 ${
                     isFlipped
                       ? "opacity-0 delay-300"
                       : "opacity-100 group-hover:opacity-0 group-hover:delay-300"
                   }`}
-                  // The delay-300 ensures it fades OUT only after it has rotated halfway (90deg)
                 >
                   <img
                     src={service.img}
@@ -180,14 +176,13 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* === BACK FACE === */}
+                {/* BACK FACE */}
                 <div
                   className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0f0f0f] p-8 flex flex-col justify-center items-start rounded-sm border-2 border-td-yellow overflow-hidden transition-opacity duration-300 ${
                     isFlipped
                       ? "opacity-100 delay-300"
                       : "opacity-0 group-hover:opacity-100 group-hover:delay-300"
                   }`}
-                  // The delay-300 ensures it fades IN only after it has rotated halfway
                 >
                   <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-td-yellow/5 rounded-full blur-2xl pointer-events-none"></div>
 
@@ -218,7 +213,8 @@ const Services = () => {
             </div>
           );
         })}
-        <div className="min-w-[50px]"></div>
+        {/* Right side padding to allow final card to clear edge */}
+        <div className="min-w-[50px] md:min-w-[200px]"></div>
       </div>
     </section>
   );
