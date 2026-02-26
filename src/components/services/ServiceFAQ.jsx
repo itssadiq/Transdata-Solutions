@@ -4,23 +4,24 @@ import { Plus, Minus } from "lucide-react";
 const ServiceFAQ = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // If there are no FAQs for this service, don't render the section at all
+  // Safety check: don't render if no FAQs are provided in the data file
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <section className="py-24 bg-gray-50 border-t border-gray-100">
-      <div className="container mx-auto px-6 md:px-20">
+    <section className="py-20 md:py-24 bg-gray-50 border-t border-gray-100">
+      {/* Container locked to 1400px symmetry */}
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         {/* Header */}
         <div className="mb-16">
           <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-[0.3em] flex items-center gap-3">
-            <span className="w-8 h-[2px] bg-td-yellow"></span> 03 // Support
+            <span className="w-8 h-[2px] bg-td-yellow"></span> // Support
           </h2>
-          <h3 className="text-4xl md:text-5xl font-extrabold text-black">
+          <h3 className="text-3xl md:text-5xl font-extrabold text-black">
             Common Questions
           </h3>
         </div>
 
-        {/* Accordion List */}
+        {/* Accordion List - Constrained to 4xl for readability */}
         <div className="max-w-4xl space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -31,11 +32,11 @@ const ServiceFAQ = ({ faqs }) => {
                 className={`border transition-all duration-300 rounded-sm overflow-hidden ${
                   isOpen
                     ? "border-td-yellow bg-white shadow-lg"
-                    : "border-gray-200 bg-white"
+                    : "border-gray-200 bg-white hover:border-gray-300"
                 }`}
               >
                 <button
-                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none cursor-pointer"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
                   <span
