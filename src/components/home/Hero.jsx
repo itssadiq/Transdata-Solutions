@@ -47,16 +47,19 @@ const Hero = () => {
   const [heroVersion, setHeroVersion] = useState(1);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
-  // Fix for iOS Autoplay: Manually trigger play if needed
+  // iOS Safari Autoplay Fix
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch((error) => {
-        console.log("Autoplay prevented on iOS:", error);
+      // Manually force these properties to ensure iOS identifies it as a background element
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((err) => {
+        console.warn("Autoplay blocked or failed:", err);
       });
     }
   }, []);
 
-  // Elegant Bottom-to-Top Rotation
+  // Text Rotation Animation
   useEffect(() => {
     const interval = setInterval(() => {
       const tl = gsap.timeline();
@@ -83,7 +86,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Initial Entrance Animation
+  // Entrance Animation
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -107,34 +110,35 @@ const Hero = () => {
       ref={heroRef}
       className="relative h-[95vh] md:h-screen w-full overflow-hidden bg-black"
     >
-      {/* 1. BACKGROUND MEDIA */}
-      <div className="absolute inset-0 z-0">
-        {/* Placeholder image shows until video is buffered */}
-        <img
-          src={videoPoster}
-          alt="Poster"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? "opacity-0" : "opacity-100"}`}
-        />
+      {/* BACKGROUND MEDIA */}
+      <div className="absolute inset-0 z-0 bg-black">
+        {/* custom image overlay while loading */}
+        {!isVideoLoaded && (
+          <img
+            src={videoPoster}
+            alt="Transdata"
+            className="absolute inset-0 w-full h-full object-cover z-10"
+          />
+        )}
+
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          webkit-playsinline="true" // Specific legacy iOS attribute
+          webkit-playsinline="true"
           preload="auto"
-          disablePictureInPicture
-          poster={videoPoster} // Embedded poster for faster lookup
           onLoadedData={() => setIsVideoLoaded(true)}
           className={`w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? "opacity-100" : "opacity-0"}`}
         >
           <source src={videoFile} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/50 z-20" />
       </div>
 
-      {/* 2. UI LAYER */}
-      <div className="relative z-10 mx-auto h-full w-full max-w-[1400px] px-4 md:px-10">
+      {/* UI LAYER */}
+      <div className="relative z-30 mx-auto h-full w-full max-w-[1400px] px-4 md:px-10">
         <div className="flex h-full flex-col justify-center">
           <div className="hero-content-reveal w-full md:max-w-[60%]">
             <div className="hero-anim-text">
@@ -154,6 +158,7 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Sidebar */}
         <div className="hidden md:flex flex-col items-end gap-3 absolute right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 border-r-2 border-white pr-5 opacity-0 translate-x-10 reveal-sidebar">
           {SIDEBAR_LINKS.map((item) => (
             <a
@@ -166,6 +171,7 @@ const Hero = () => {
           ))}
         </div>
 
+        {/* Scroll Down */}
         <div className="absolute bottom-10 left-4 md:left-10 animate-bounce">
           <div className="text-white text-[11px] font-bold uppercase tracking-widest">
             Scroll Down ↓
