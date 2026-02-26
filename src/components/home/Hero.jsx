@@ -43,8 +43,18 @@ const SIDEBAR_LINKS = [
 
 const Hero = () => {
   const heroRef = useRef(null);
+  const videoRef = useRef(null);
   const [heroVersion, setHeroVersion] = useState(1);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  // Fix for iOS Autoplay: Manually trigger play if needed
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Autoplay prevented on iOS:", error);
+      });
+    }
+  }, []);
 
   // Elegant Bottom-to-Top Rotation
   useEffect(() => {
@@ -97,18 +107,24 @@ const Hero = () => {
       ref={heroRef}
       className="relative h-[95vh] md:h-screen w-full overflow-hidden bg-black"
     >
-      {/* 1. BACKGROUND MEDIA (Full Screen) */}
+      {/* 1. BACKGROUND MEDIA */}
       <div className="absolute inset-0 z-0">
+        {/* Placeholder image shows until video is buffered */}
         <img
           src={videoPoster}
           alt="Poster"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? "opacity-0" : "opacity-100"}`}
         />
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          webkit-playsinline="true" // Specific legacy iOS attribute
+          preload="auto"
+          disablePictureInPicture
+          poster={videoPoster} // Embedded poster for faster lookup
           onLoadedData={() => setIsVideoLoaded(true)}
           className={`w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? "opacity-100" : "opacity-0"}`}
         >
@@ -117,9 +133,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* 2. UI LAYER (Symmetry Locked to 1400px Centered Container) */}
+      {/* 2. UI LAYER */}
       <div className="relative z-10 mx-auto h-full w-full max-w-[1400px] px-4 md:px-10">
-        {/* Main Content Area - 60% Width Limit */}
         <div className="flex h-full flex-col justify-center">
           <div className="hero-content-reveal w-full md:max-w-[60%]">
             <div className="hero-anim-text">
@@ -139,7 +154,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Sidebar Menu (Right Anchored) */}
         <div className="hidden md:flex flex-col items-end gap-3 absolute right-4 md:right-10 top-1/2 -translate-y-1/2 z-30 border-r-2 border-white pr-5 opacity-0 translate-x-10 reveal-sidebar">
           {SIDEBAR_LINKS.map((item) => (
             <a
@@ -152,7 +166,6 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Scroll Down Indicator (Left Anchored) */}
         <div className="absolute bottom-10 left-4 md:left-10 animate-bounce">
           <div className="text-white text-[11px] font-bold uppercase tracking-widest">
             Scroll Down ↓
