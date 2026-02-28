@@ -5,7 +5,7 @@ const WhoWeAre = () => {
   return (
     // Updated padding to py-20 md:py-24 to match Stats section symmetry
     <section
-      id="about"
+      id="about-us"
       className="py-20 md:py-24 bg-white border-b border-gray-100"
     >
       {/* Container locked to 1400px framework */}

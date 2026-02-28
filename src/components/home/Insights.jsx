@@ -35,7 +35,7 @@ const Insights = () => {
 
   return (
     <section
-      id="insights"
+      id="testimonials"
       className="py-24 bg-white container mx-auto px-6 md:px-20 reveal-up border-b border-gray-100"
     >
       <h2 className="text-xs font-bold text-td-yellow mb-16 uppercase tracking-widest flex items-center gap-3">

@@ -95,7 +95,7 @@ const Services = () => {
 
   return (
     <section
-      id="services-drag"
+      id="services"
       className="bg-gray-50 py-20 md:py-24 overflow-hidden border-b border-gray-200"
     >
       {/* Symmetrical Header Container */}

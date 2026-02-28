@@ -217,10 +217,7 @@ const SocialPosts = () => {
   };
 
   return (
-    <section
-      id="social-slider"
-      className="bg-gray-50 py-24 border-b border-gray-200"
-    >
+    <section id="posts" className="bg-gray-50 py-24 border-b border-gray-200">
       <div className="container mx-auto px-6 md:px-20 mb-12 text-center">
         <h3 className="text-4xl md:text-5xl font-bold text-black mb-2">
           Connect and <span className="text-td-yellow">follow us</span> on

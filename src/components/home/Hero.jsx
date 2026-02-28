@@ -37,7 +37,6 @@ const SIDEBAR_LINKS = [
   "Industries",
   "Contact",
   "Testimonials",
-  "FAQ's",
   "Posts",
 ];
 
