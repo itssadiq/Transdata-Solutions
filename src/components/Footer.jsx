@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Logo from "../assets/LOGO_1.png";
 
 const Footer = () => {
@@ -53,28 +53,14 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
+
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Blogs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  All Resources
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="hover:text-black transition-colors"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -122,7 +108,7 @@ const Footer = () => {
             <ul className="space-y-4 text-sm font-medium text-gray-600">
               <li>
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/transdatasolutions/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-3 hover:text-black transition-colors"
@@ -135,7 +121,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/transdatasolutions/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-3 hover:text-black transition-colors"
@@ -146,19 +132,7 @@ const Footer = () => {
                   Instagram
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 hover:text-black transition-colors"
-                >
-                  <div className="w-6 h-6 bg-black text-white flex items-center justify-center rounded-sm text-xs">
-                    <Twitter size={14} fill="white" strokeWidth={0} />
-                  </div>
-                  X
-                </a>
-              </li>
+
               <li>
                 <a
                   href="https://www.linkedin.com/company/transdata-solutions-llc/"
