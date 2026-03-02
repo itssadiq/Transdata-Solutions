@@ -70,34 +70,52 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4 text-sm font-medium text-gray-600">
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Technology Solutions
-                </a>
+                <Link
+                  to="/services/it-amc-services"
+                  className="hover:text-black transition-colors"
+                >
+                  IT AMC Service
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Security Solutions
-                </a>
+                <Link
+                  to="/services/power-backup-ups"
+                  className="hover:text-black transition-colors"
+                >
+                  UPS Solutions
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Infrastructure Solutions
-                </a>
+                <Link
+                  to="/services/wireless-network-services"
+                  className="hover:text-black transition-colors"
+                >
+                  Wifi Services
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Managed Services
-                </a>
+                <Link
+                  to="/services/cloud-security-solutions"
+                  className="hover:text-black transition-colors"
+                >
+                  Cloud Security
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Hybrid IT & Cloud
-                </a>
+                <Link
+                  to="/services/conference-solutions"
+                  className="hover:text-black transition-colors"
+                >
+                  Conference Solution
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  Technical Support
-                </a>
+                <Link
+                  to="/services/servicenow-expertise"
+                  className="hover:text-black transition-colors"
+                >
+                  Talent Solution
+                </Link>
               </li>
             </ul>
           </div>
