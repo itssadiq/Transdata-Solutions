@@ -149,7 +149,7 @@ const Hero = () => {
               </p>
             </div>
             <Link
-              to="/services"
+              to="/solutions"
               className="inline-flex items-center justify-center px-6 py-3 bg-td-yellow text-black font-bold uppercase tracking-widest text-[13px] hover:bg-white transition-all duration-300 shadow-2xl rounded"
             >
               Our Services
