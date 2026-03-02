@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { ChevronDown, ArrowRight } from "lucide-react";
 
@@ -9,6 +9,18 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
 
   const activeCategoryData = solutionsData.find((c) => c.id === activeCategory);
 
+  // Prevent main page scroll when mega menu is open
+  useEffect(() => {
+    if (isServicesOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isServicesOpen]);
+
   return (
     <div
       className="hidden md:flex items-center gap-8 h-full"
@@ -18,6 +30,7 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
         Home
       </NavLink>
 
+      {/* SOLUTIONS MEGA MENU */}
       <div
         className="relative h-full flex items-center"
         onMouseEnter={() => setIsServicesOpen(true)}
@@ -40,64 +53,62 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
           Solutions <ChevronDown size={12} />
         </NavLink>
 
+        {/* MEGA DROPDOWN PANEL - Increased to 1200px and removed scrolls */}
         <div
-          className={`absolute top-full left-1/2 -translate-x-1/2 w-[900px] max-h-[85vh] bg-white shadow-2xl border-t-4 border-td-yellow transition-all duration-300 origin-top overflow-hidden rounded-b-sm flex ${
+          className={`absolute top-full left-1/2 -translate-x-1/2 w-[1200px] bg-white shadow-2xl border-t-4 border-td-yellow transition-all duration-300 origin-top flex rounded-b-sm ${
             isServicesOpen
               ? "opacity-100 scale-y-100 visible"
-              : "opacity-0 scale-y-95 invisible"
+              : "opacity-0 scale-y-95 invisible pointer-events-none"
           }`}
         >
-          <div className="w-1/4 bg-gray-50 border-r border-gray-200 py-4 overflow-y-auto custom-scrollbar">
+          {/* LEFT SIDEBAR - Content driven height */}
+          <div className="w-[20%] bg-gray-50 border-r border-gray-100 py-6">
             {solutionsData.map((cat) => (
               <div
                 key={cat.id}
                 onMouseEnter={() => setActiveCategory(cat.id)}
-                className={`px-6 py-4 cursor-pointer text-sm font-bold flex justify-between items-center transition-all duration-200 ${
+                className={`px-8 py-4 cursor-pointer text-[13px] font-bold transition-all duration-200 ${
                   activeCategory === cat.id
-                    ? "text-black bg-white border-l-4 border-td-yellow shadow-sm"
-                    : "text-gray-500 hover:text-black border-l-4 border-transparent"
+                    ? "text-black bg-white shadow-sm"
+                    : "text-gray-400 hover:text-black"
                 }`}
               >
                 {cat.title}
-                {activeCategory === cat.id && (
-                  <ArrowRight size={14} className="text-td-yellow" />
-                )}
               </div>
             ))}
           </div>
 
-          <div className="w-3/4 p-8 bg-white overflow-y-auto custom-scrollbar">
-            <h4 className="text-2xl font-bold mb-6 text-black border-b border-gray-100 pb-4 sticky top-0 bg-white z-10">
-              {activeCategoryData?.title}
-            </h4>
-
+          {/* RIGHT CONTENT - 3 Column Grid */}
+          <div className="w-[80%] p-10 bg-white">
             <div
               key={activeCategory}
-              className="grid grid-cols-2 gap-6 pb-10 animate-pulse-once"
+              className="grid grid-cols-3 gap-5 animate-pulse-once"
             >
               {activeCategoryData?.items.map((item, idx) => (
                 <NavLink
                   key={idx}
                   to={item.link}
-                  className="group block rounded-sm overflow-hidden hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-100"
+                  className="group block rounded-sm overflow-hidden border border-gray-100 hover:border-td-yellow hover:shadow-lg transition-all duration-300"
                   onClick={() => setIsServicesOpen(false)}
                 >
-                  <div className="h-32 w-full overflow-hidden bg-gray-100 relative">
+                  {/* Image Area - Slightly smaller to fit 3 in a row */}
+                  <div className="h-28 w-full overflow-hidden bg-gray-100 relative">
                     <img
                       src={item.img}
                       alt={item.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
                   </div>
 
-                  <div className="p-4 flex justify-between items-center bg-white">
-                    <p className="font-bold text-sm text-gray-700 group-hover:text-black transition-colors">
+                  {/* Text Area */}
+                  <div className="p-3 flex justify-between items-center bg-white">
+                    <p className="font-bold text-[12px] text-gray-700 group-hover:text-black transition-colors leading-tight">
                       {item.name}
                     </p>
                     <ArrowRight
-                      size={16}
-                      className="text-gray-300 group-hover:text-td-yellow transition-all duration-300 group-hover:translate-x-1"
+                      size={14}
+                      className="text-gray-300 group-hover:text-td-yellow transition-all duration-300 group-hover:translate-x-1 shrink-0"
                     />
                   </div>
                 </NavLink>
