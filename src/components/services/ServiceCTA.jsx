@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const ServiceCTA = () => {
   return (
-    <section className="py-20 md:py-24 bg-td-yellow">
-      {/* Updated to match 1400px symmetry lock */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+    <section className="py-24 bg-td-yellow">
+      {/* Updated hierarchy to match OurStory symmetry */}
+      <div className="container mx-auto px-6 md:px-20 flex flex-col lg:flex-row items-center justify-between gap-10">
         <div className="text-center lg:text-left">
           <h3 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
             Ready to Upgrade Your <br className="hidden md:block" />{" "}

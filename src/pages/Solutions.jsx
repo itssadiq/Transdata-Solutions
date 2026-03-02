@@ -114,13 +114,11 @@ const solutionsList = [
 const Solutions = () => {
   const { hash } = useLocation();
 
-  // Logic to handle smooth scrolling to specific anchor IDs
   useEffect(() => {
     if (hash) {
       const id = hash.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
-        // Small timeout ensures the DOM has fully rendered before scrolling
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
@@ -143,20 +141,23 @@ const Solutions = () => {
       {solutionsList.map((pillar, index) => (
         <section
           key={pillar.id}
-          id={pillar.id} // Added ID for anchor linking
+          id={pillar.id}
           className={`py-20 md:py-24 ${
             index % 2 !== 0 ? "bg-gray-50" : "bg-white"
-          } border-b border-gray-100 scroll-mt-32`} // scroll-mt-32 accounts for the sticky navbar height
+          } border-b border-gray-100 scroll-mt-32`}
         >
-          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Outer container updated to match OurStory hierarchy */}
+          <div className="container mx-auto px-6 md:px-20">
+            {/* Grid structure updated to 2 columns to match OurStory hierarchy */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* Pillar Info (Left Side) */}
-              <div className="lg:col-span-4 lg:sticky lg:top-32">
+              <div className="lg:sticky lg:top-32">
                 <div className="w-16 h-16 bg-black rounded-sm flex items-center justify-center mb-8">
                   {pillar.icon}
                 </div>
                 <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-[0.3em] flex items-center gap-3">
-                  Pillar 0{index + 1}
+                  <span className="w-8 h-0.5 bg-black"></span> 0{index + 1} //
+                  Pillar
                 </h2>
                 <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6 leading-tight">
                   {pillar.title}
@@ -167,7 +168,7 @@ const Solutions = () => {
               </div>
 
               {/* Sub-services Grid (Right Side) */}
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {pillar.subServices.map((sub, i) => (
                   <Link
                     key={i}
