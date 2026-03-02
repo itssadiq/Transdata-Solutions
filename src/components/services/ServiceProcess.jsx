@@ -8,22 +8,24 @@ const ServiceProcess = ({
   if (!steps || steps.length === 0) return null;
 
   return (
-    <section className="py-20 md:py-24 bg-td-black text-white overflow-hidden">
-      {/* Container updated for 1400px symmetry */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        {/* Header Section */}
-        <div className="mb-16">
-          <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-[0.3em] flex items-center gap-3">
-            Lifecycle
-          </h2>
-          <h3 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-            {title}
-          </h3>
-          {subtitle && (
-            <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
-              {subtitle}
-            </p>
-          )}
+    <section className="py-24 bg-td-black text-white overflow-hidden">
+      {/* Container updated to match site-wide hierarchy */}
+      <div className="container mx-auto px-6 md:px-20">
+        {/* Header - Updated to match 2-column OurStory format */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 reveal-up">
+          <div>
+            <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
+              <span className="w-8 h-0.5 bg-td-yellow"></span> Lifecycle
+            </h2>
+            <h3 className="text-4xl font-bold leading-tight">{title}</h3>
+          </div>
+          <div className="flex items-end">
+            {subtitle && (
+              <p className="text-gray-400 text-lg leading-relaxed font-medium">
+                {subtitle}
+              </p>
+            )}
+          </div>
         </div>
 
         {/* Dynamic Grid - Handles 4, 6, or 8 steps automatically */}

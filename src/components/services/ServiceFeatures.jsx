@@ -6,17 +6,27 @@ const ServiceFeatures = ({ features }) => {
   if (!features || features.length === 0) return null;
 
   return (
-    <section className="py-20 md:py-24 bg-white">
-      {/* Container updated for 1400px symmetry */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        {/* Header Section */}
-        <div className="mb-16">
-          <h2 className="text-xs font-bold text-black mb-4 uppercase tracking-[0.3em] flex items-center gap-3">
-            <span className="w-8 h-[2px] bg-td-yellow"></span> // Capabilities
-          </h2>
-          <h3 className="text-4xl md:text-5xl font-extrabold text-black">
-            What We Deliver
-          </h3>
+    <section className="py-24 bg-white">
+      {/* Container updated to match site-wide hierarchy */}
+      <div className="container mx-auto px-6 md:px-20">
+        {/* Header - Updated to match 2-column OurStory format */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 reveal-up">
+          <div>
+            <h2 className="text-xs font-bold text-black mb-6 uppercase tracking-widest flex items-center gap-3">
+              <span className="w-8 h-0.5 bg-td-yellow"></span> 01 //
+              Capabilities
+            </h2>
+            <h3 className="text-4xl font-bold leading-tight">
+              What We Deliver
+            </h3>
+          </div>
+          <div className="flex items-end">
+            <p className="text-gray-600 leading-relaxed font-medium">
+              We provide end-to-end IT solutions designed to optimize your
+              infrastructure, strengthen security, and ensure your business
+              operations remain uninterrupted and scalable.
+            </p>
+          </div>
         </div>
 
         {/* Feature Grid - Responsive 1, 2, or 3 columns */}

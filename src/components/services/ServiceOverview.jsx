@@ -5,9 +5,9 @@ const ServiceOverview = ({ text, benefits }) => {
   if (!text) return null;
 
   return (
-    <section className="py-20 md:py-24 bg-white border-b border-gray-100">
-      {/* Container updated for 1400px symmetry */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <section className="py-24 bg-white border-b border-gray-100">
+      {/* Container updated to match OurStory hierarchy exactly */}
+      <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Left: Detailed Description */}
         <div>
           <h3 className="text-3xl md:text-4xl font-extrabold mb-8 text-black leading-tight">
