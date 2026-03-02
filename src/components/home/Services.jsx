@@ -1,5 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+// Ensure these filenames match your assets folder EXACTLY
 import managedIt from "../../assets/It-services.jpeg";
 import Datacenter from "../../assets/data-center.jpg";
 import Networking from "../../assets/networking-switching.jpeg";
@@ -14,7 +17,6 @@ const Services = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [clickedCard, setClickedCard] = useState(null);
 
-  // Hook to handle responsive calculation for the cards start line
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -24,13 +26,15 @@ const Services = () => {
   }, []);
 
   const handleMouseDown = (e) => {
-    if (e.target.closest("button")) return;
+    if (e.target.closest("button") || e.target.closest("a")) return;
     setIsDown(true);
     setStartX(e.pageX - servicesRef.current.offsetLeft);
     setScrollLeft(servicesRef.current.scrollLeft);
   };
+
   const handleMouseLeave = () => setIsDown(false);
   const handleMouseUp = () => setIsDown(false);
+
   const handleMouseMove = (e) => {
     if (!isDown) return;
     e.preventDefault();
@@ -54,6 +58,7 @@ const Services = () => {
       title: "Managed IT",
       subtitle: "Services",
       img: managedIt,
+      path: "/solutions#managed-it",
       desc: "Comprehensive IT management including 24/7 monitoring, helpdesk support, and proactive maintenance to ensure your operations never miss a beat.",
     },
     {
@@ -61,6 +66,7 @@ const Services = () => {
       title: "IT Datacenter",
       subtitle: "Solutions",
       img: Datacenter,
+      path: "/solutions#datacenter",
       desc: "End-to-end data center design, precision cooling, power management, and racking solutions built for high-density and mission-critical environments.",
     },
     {
@@ -68,6 +74,7 @@ const Services = () => {
       title: "Networking &",
       subtitle: "Switching",
       img: Networking,
+      path: "/solutions#networking",
       desc: "Designing robust network architectures with enterprise-grade switching, routing, and wireless infrastructure to ensure seamless connectivity.",
     },
     {
@@ -75,6 +82,7 @@ const Services = () => {
       title: "Cyber Security",
       subtitle: "Services",
       img: CyberSecurity,
+      path: "/solutions#cybersecurity",
       desc: "Advanced threat protection, zero-trust architectures, and compliance strategies to safeguard your digital assets against evolving cyber threats.",
     },
     {
@@ -82,6 +90,7 @@ const Services = () => {
       title: "Data Backup &",
       subtitle: "Protection",
       img: DataBackup,
+      path: "/solutions#datacenter", // Adjust this path if you want it to point elsewhere
       desc: "Resilient disaster recovery planning and automated backup solutions that ensure business continuity and data integrity in any scenario.",
     },
     {
@@ -89,6 +98,7 @@ const Services = () => {
       title: "Communication",
       subtitle: "& LV",
       img: CommunicationLV,
+      path: "/solutions#communication",
       desc: "Unified communication systems combined with structured Low Voltage (LV) cabling solutions for smart building automation and connectivity.",
     },
   ];
@@ -98,7 +108,6 @@ const Services = () => {
       id="services"
       className="bg-gray-50 py-20 md:py-24 overflow-hidden border-b border-gray-200"
     >
-      {/* Symmetrical Header Container */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-20 mb-12 reveal-up">
         <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest flex items-center gap-3">
           <span className="w-8 h-0.5 bg-td-yellow"></span> Capabilities
@@ -115,7 +124,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Symmetrical Visual Scroll Guide */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-20 mb-10 reveal-up">
         <div className="flex items-center gap-4 opacity-50">
           <div className="h-px bg-gray-400 w-16"></div>
@@ -126,15 +134,12 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Cards Container - Calculated pl to perfectly match the px-6/px-20 header alignment */}
       <div
         ref={servicesRef}
         className={`flex gap-6 md:gap-8 overflow-x-auto pb-16 pt-4 cursor-grab no-scrollbar select-none ${
           isDown ? "active cursor-grabbing" : ""
         }`}
         style={{
-          // On mobile: px-6 (1.5rem). On desktop: px-20 (5rem).
-          // Beyond 1400px: (100vw - 1400px) / 2 + the base padding.
           paddingLeft: isMobile
             ? "1.5rem"
             : "calc(max(5rem, (100vw - 1400px) / 2 + 5rem))",
@@ -217,22 +222,19 @@ const Services = () => {
                     {service.desc}
                   </p>
 
-                  <button
-                    className="mt-8 flex items-center gap-2 text-td-yellow text-xs font-bold uppercase tracking-widest relative z-[100] !cursor-pointer pointer-events-auto hover:text-white transition-colors duration-300"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      console.log("Clicked Explore", service.title);
-                    }}
+                  <Link
+                    to={service.path}
+                    className="mt-8 flex items-center gap-2 text-td-yellow text-xs font-bold uppercase tracking-widest relative z-[100] hover:text-white transition-colors duration-300"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <span>Explore</span>
                     <ArrowUpRight size={14} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
           );
         })}
-        {/* Transparent spacer to prevent final card from sticking to the edge */}
         <div className="min-w-[50px]"></div>
       </div>
     </section>

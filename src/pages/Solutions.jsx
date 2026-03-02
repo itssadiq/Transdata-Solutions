@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   ArrowRight,
   Shield,
@@ -112,6 +112,22 @@ const solutionsList = [
 ];
 
 const Solutions = () => {
+  const { hash } = useLocation();
+
+  // Logic to handle smooth scrolling to specific anchor IDs
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        // Small timeout ensures the DOM has fully rendered before scrolling
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [hash]);
+
   return (
     <div className="bg-white">
       {/* HERO SECTION */}
@@ -127,12 +143,15 @@ const Solutions = () => {
       {solutionsList.map((pillar, index) => (
         <section
           key={pillar.id}
-          className={`py-20 md:py-24 ${index % 2 !== 0 ? "bg-gray-50" : "bg-white"} border-b border-gray-100`}
+          id={pillar.id} // Added ID for anchor linking
+          className={`py-20 md:py-24 ${
+            index % 2 !== 0 ? "bg-gray-50" : "bg-white"
+          } border-b border-gray-100 scroll-mt-32`} // scroll-mt-32 accounts for the sticky navbar height
         >
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               {/* Pillar Info (Left Side) */}
-              <div className="lg:col-span-4 sticky top-32">
+              <div className="lg:col-span-4 lg:sticky lg:top-32">
                 <div className="w-16 h-16 bg-black rounded-sm flex items-center justify-center mb-8">
                   {pillar.icon}
                 </div>
