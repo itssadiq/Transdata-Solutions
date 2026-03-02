@@ -42,13 +42,12 @@ const WhoWeAre = () => {
                   About Us
                 </h4>
                 <p className="text-gray-600 text:lg md:text-sm leading-relaxed mb-4">
-                  Managing IT infrastructure requires consistency, security, and
-                  predictable performance. Backed by 13+ years of industry
-                  experience, Transdata Solutions supports IT teams by
-                  implementing and managing enterprise-grade infrastructure,
-                  cloud, cybersecurity, and managed services. The objective is
-                  simple: stable systems, reduced operational risk, and IT
-                  environments that scale without disruption.
+                  Transdata Solutions takes pride in being the leading IT
+                  solutions integrator, providing consultation services to
+                  businesses across industries, for 13+ years. Our expertise
+                  spans hardware infrastructure, enterprise software, data
+                  center and storage solutions, cybersecurity, and cloud
+                  technologies.
                 </p>
 
                 <div
@@ -57,15 +56,11 @@ const WhoWeAre = () => {
                   }`}
                 >
                   <p className="text-gray-600 text:lg md:text-sm leading-relaxed mb-4">
-                    As a technology consulting company, Transdata Solutions
-                    caters to all types of organizations at each level. We
-                    firmly believe that we have built an organization uniquely
-                    equipped for this task.
-                  </p>
-                  <p className="text-gray-600 text:lg md:text-sm leading-relaxed">
-                    Furthermore, Transdata Solutions holds the perfect expertise
-                    and knowledge to find the best combination when it comes to
-                    product configuration for our clients.
+                    From strengthening core IT infrastructure to securing and
+                    optimizing digital environments, we design solutions that
+                    are reliable, secure, and built for long-term performance.
+                    At Transdata Solutions, we believe technology should enable
+                    progress — not complicate it.
                   </p>
                   <div
                     className={`absolute bottom-0 left-0 w-full h-full bg-linear-to-t from-white via-white/90 to-transparent pointer-events-none transition-opacity duration-300 ${
