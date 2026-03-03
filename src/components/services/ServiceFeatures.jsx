@@ -1,15 +1,59 @@
 import React from "react";
-import { Layers } from "lucide-react";
+// Import the potential icons we'll use across all services
+import {
+  Layers,
+  ShieldCheck,
+  Cpu,
+  Database,
+  Network,
+  HardDrive,
+  Headphones,
+  Cloud,
+  Lock,
+  Settings,
+  Zap,
+  Monitor,
+  Activity,
+  FileCheck,
+  Users,
+  Globe,
+  Server,
+  Radio,
+  ShieldAlert,
+  Search,
+} from "lucide-react";
+
+// Mapping string names from your Data file to actual Lucide Components
+const iconMap = {
+  layers: Layers,
+  shield: ShieldCheck,
+  cpu: Cpu,
+  database: Database,
+  network: Network,
+  harddrive: HardDrive,
+  support: Headphones,
+  cloud: Cloud,
+  lock: Lock,
+  settings: Settings,
+  zap: Zap,
+  monitor: Monitor,
+  activity: Activity,
+  compliance: FileCheck,
+  users: Users,
+  globe: Globe,
+  server: Server,
+  wireless: Radio,
+  alert: ShieldAlert,
+  search: Search,
+};
 
 const ServiceFeatures = ({ features }) => {
-  // Prevent rendering if no feature data is passed
   if (!features || features.length === 0) return null;
 
   return (
     <section className="py-24 bg-white">
-      {/* Container updated to match site-wide hierarchy */}
       <div className="container mx-auto px-6 md:px-20">
-        {/* Header - Updated to match 2-column OurStory format */}
+        {/* Header - Matching OurStory Hierarchy */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 reveal-up">
           <div>
             <h2 className="text-xs font-bold text-black mb-6 uppercase tracking-widest flex items-center gap-3">
@@ -29,29 +73,32 @@ const ServiceFeatures = ({ features }) => {
           </div>
         </div>
 
-        {/* Feature Grid - Responsive 1, 2, or 3 columns */}
+        {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group p-8 md:p-10 border border-gray-100 bg-gray-50/30 hover:bg-white hover:border-td-yellow hover:shadow-xl transition-all duration-500 rounded-sm"
-            >
-              {/* Feature Icon Container */}
-              <div className="w-14 h-14 bg-black text-white flex items-center justify-center rounded-sm mb-8 group-hover:bg-td-yellow group-hover:text-black transition-colors duration-300">
-                <Layers size={28} />
+          {features.map((feature, index) => {
+            // Determine which icon to show (fallback to Layers if not found)
+            const IconComponent = iconMap[feature.icon] || Layers;
+
+            return (
+              <div
+                key={index}
+                className="group p-8 md:p-10 border border-gray-100 bg-gray-50/30 hover:bg-white hover:border-td-yellow hover:shadow-xl transition-all duration-500 rounded-sm"
+              >
+                {/* Dynamic Icon Container */}
+                <div className="w-14 h-14 bg-black text-td-yellow flex items-center justify-center rounded-sm mb-8 group-hover:bg-td-yellow group-hover:text-black transition-colors duration-300">
+                  <IconComponent size={30} strokeWidth={1.5} />
+                </div>
+
+                <h4 className="text-xl md:text-2xl font-bold mb-4 text-black group-hover:text-td-yellow transition-colors">
+                  {feature.title}
+                </h4>
+
+                <p className="text-gray-500 text-base leading-relaxed">
+                  {feature.desc}
+                </p>
               </div>
-
-              {/* Feature Title */}
-              <h4 className="text-xl md:text-2xl font-bold mb-4 text-black group-hover:text-td-yellow transition-colors">
-                {feature.title}
-              </h4>
-
-              {/* Feature Description */}
-              <p className="text-gray-500 text-base leading-relaxed">
-                {feature.desc}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

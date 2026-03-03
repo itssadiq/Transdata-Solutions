@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import video from "../../assets/video-2.mp4";
 
 const WhoWeAre = () => {
   const [isReadMoreOpen, setIsReadMoreOpen] = useState(false);
@@ -20,10 +21,7 @@ const WhoWeAre = () => {
               playsInline
               className="w-full h-full object-cover"
             >
-              <source
-                src="https://www.pexels.com/download/video/10395146/"
-                type="video/mp4"
-              />
+              <source src={video} type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/10"></div>
           </div>

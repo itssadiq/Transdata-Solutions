@@ -22,26 +22,32 @@ export const servicesData = {
       {
         title: "Technical Support & Incident Management",
         desc: "Remote and on-site support with rapid response. Priority service under customized SLAs with full incident tracking and resolution documentation.",
+        icon: "support",
       },
       {
         title: "Proactive System & Performance Management",
         desc: "24/7 infrastructure monitoring and alerts. Regular health checks and preventive maintenance with performance optimization to avoid bottlenecks.",
+        icon: "activity",
       },
       {
         title: "Network & Security Management",
         desc: "Maintenance of routers, switches, Wi-Fi, and firewalls. Includes security vulnerability scanning, remediation, and bandwidth optimization for peak performance.",
+        icon: "network",
       },
       {
         title: "Hardware & Software Excellence",
         desc: "Diagnostics and maintenance for desktops, laptops, and servers. Genuine component replacement and software updates for critical applications.",
+        icon: "cpu",
       },
       {
         title: "Compliance & Reporting",
         desc: "IT asset tracking and performance analytics. Security compliance with industry standards and strategic recommendations for IT growth.",
+        icon: "compliance",
       },
       {
         title: "Enterprise-Grade Data Protection",
         desc: "Cloud and on-premises backup solutions, disaster recovery planning, data restoration, and ransomware protection.",
+        icon: "lock",
       },
     ],
 
@@ -84,14 +90,17 @@ export const servicesData = {
       {
         title: "Foundation for Success",
         desc: "Partnering with Transdata Solutions means gainning a partner committed to enabling smooth operations through optimized infrastructure.",
+        icon: "support",
       },
       {
         title: "Secure Technology Stack",
         desc: "We implement secure, compliant technology solutions that protect your new office environment from day one.",
+        icon: "shield",
       },
       {
         title: "Optimized Scalability",
         desc: "Start your new office journey with confidence, knowing your IT environment is designed for long-term success and growth.",
+        icon: "layers",
       },
     ],
 
@@ -191,26 +200,32 @@ export const servicesData = {
       {
         title: "Business IT Assessment",
         desc: "Evaluate your current systems to identify gaps, risks, and opportunities for improvement.",
+        icon: "network",
       },
       {
         title: "Technology Strategy & Roadmap",
         desc: "Develop a forward-looking IT plan that supports growth and digital transformation.",
+        icon: "globe",
       },
       {
         title: "Cybersecurity Advisory",
         desc: "Define a security framework that protects data, networks, and users from modern threats.",
+        icon: "monitor",
       },
       {
         title: "Network & Infrastructure Consulting",
         desc: "Design secure, scalable network architectures that support your operational needs.",
+        icon: "users",
       },
       {
         title: "Cloud & Transformation Planning",
         desc: "Plan cloud migrations, integrations, and virtualization for agility and efficiency.",
+        icon: "server",
       },
       {
         title: "New Office IT Strategy",
         desc: "Plan the IT technology stack and infrastructure for new office environments in Dubai or Abu Dhabi.",
+        icon: "settings",
       },
     ],
 
@@ -253,26 +268,32 @@ export const servicesData = {
       {
         title: "Strategic Planning & Assessment",
         desc: "Comprehensive audit of current data center assets, network dependencies, and workloads to build a tailored migration strategy.",
+        icon: "server",
       },
       {
         title: "Risk-Controlled Execution",
         desc: "Structured approach covering logistical coordination, secure transport of hardware, and real-time project oversight.",
+        icon: "database",
       },
       {
         title: "Secure Data Handling",
         desc: "Prioritizing integrity through detailed backups, encryption during transit, and rigorous validation at every step.",
+        icon: "settings",
       },
       {
         title: "Reinstallation & Go-Live",
         desc: "Precision rack-and-stack installation, power/network configuration, and comprehensive testing for operational readiness.",
+        icon: "zap",
       },
       {
         title: "Post-Migration Optimization",
         desc: "Post-move tuning, performance checks, and ongoing support to ensure peak stability and resilience.",
+        icon: "wireless",
       },
       {
         title: "Scalable Expansion",
         desc: "Relocate to infrastructure that supports scalability, reliability, and future-proof expansion for your business.",
+        icon: "network",
       },
     ],
 
@@ -315,26 +336,32 @@ export const servicesData = {
       {
         title: "Datacenter Infrastructure Design & Deployment",
         desc: "Tailored architecture planning and implementation to support business growth and performance targets.",
+        icon: "server",
       },
       {
         title: "Enterprise Server Deployment",
         desc: "Custom server configurations optimized for your workloads and operational requirements.",
+        icon: "network",
       },
       {
         title: "Scalable Storage Systems",
         desc: "Flexible storage infrastructure — including SAN, NAS, hybrid, and all-flash systems — that grows with your data needs.",
+        icon: "layers",
       },
       {
         title: "Virtualization & Consolidation",
         desc: "Server, storage, and application virtualization to maximize utilization and reduce hardware footprint.",
+        icon: "settings",
       },
       {
         title: "Backup & Business Continuity",
         desc: "Automated backups, disaster recovery planning, and rapid restoration capabilities to protect critical business data.",
+        icon: "compliance",
       },
       {
         title: "Performance Optimization",
         desc: "Resource tuning, capacity planning, and performance monitoring to ensure systems run at peak efficiency.",
+        icon: "monitor",
       },
     ],
   },
@@ -362,26 +389,32 @@ export const servicesData = {
       {
         title: "Custom System Design & Deployment",
         desc: "We assess your business requirements and architect NAS solutions that fit your data volume, performance targets, and scalability goals.",
+        icon: "settings",
       },
       {
         title: "Scalable Storage Capacity",
         desc: "Expand storage seamlessly as your data grows — without major infrastructure changes or disruption to operations.",
+        icon: "search",
       },
       {
         title: "Centralized Data Management",
         desc: "Efficiently manage all business files from a single platform, improving data organization, access, and shared workflows.",
+        icon: "server",
       },
       {
         title: "Remote Access & Integration",
         desc: "Enable secure network-wide and remote data access, with options for cloud integration and mobile connectivity to support flexible work environments.",
+        icon: "database",
       },
       {
         title: "Data Redundancy & Protection",
         desc: "Implement redundancy through RAID configurations and automated backup routines to ensure data availability and rapid recovery.",
+        icon: "support",
       },
       {
         title: "Enhanced Security Controls",
         desc: "Deploy advanced encryption and user access policies to safeguard sensitive business data and enforce authorization rules across the network.",
+        icon: "lock",
       },
     ],
   },
@@ -409,26 +442,32 @@ export const servicesData = {
       {
         title: "Infrastructure Virtualization",
         desc: "Implementation of server, storage, and network virtualization to consolidate physical resources, enabling workload isolation and centralized control.",
+        icon: "globe",
       },
       {
         title: "Hyper-Converged Infrastructure",
         desc: "Design and deployment of HCI platforms integrating compute, storage, and networking into a unified architecture with simplified scaling.",
+        icon: "layers",
       },
       {
         title: "High Availability & Fault Tolerance",
         desc: "Architecture design for redundancy, clustering, failover, and workload continuity to support mission-critical applications.",
+        icon: "settings",
       },
       {
         title: "Workload Optimization",
         desc: "Resource allocation planning and performance optimization for enterprise applications, databases, and virtual workloads across multi-node environments.",
+        icon: "users",
       },
       {
         title: "Scalability Architecture",
         desc: "Modular infrastructure design enabling horizontal scaling of compute and storage resources without disruption to production systems.",
+        icon: "network",
       },
       {
         title: "Centralized Management & Automation",
         desc: "Implementation of centralized orchestration, monitoring, and lifecycle management platforms for operational efficiency and governance.",
+        icon: "compliance",
       },
     ],
   },
@@ -456,26 +495,32 @@ export const servicesData = {
       {
         title: "UPS System Architecture",
         desc: "Design and deployment of online, line-interactive, and modular UPS systems to support continuous power availability for IT environments.",
+        icon: "database",
       },
       {
         title: "Power Continuity Design",
         desc: "Infrastructure planning for redundant power paths, load balancing, and fault-tolerant power distribution to support high-availability environments.",
+        icon: "zap",
       },
       {
         title: "Critical Load Protection",
         desc: "Protection of servers, storage systems, network devices, and sensitive electronics from voltage fluctuations, surges, and harmonics.",
+        icon: "monitor",
       },
       {
         title: "Scalable Power Infrastructure",
         desc: "Modular and expandable UPS architectures enabling future capacity growth without disruption to production systems.",
+        icon: "settings",
       },
       {
         title: "Power Quality Management",
         desc: "Implementation of voltage regulation, frequency stabilization, and power conditioning mechanisms to ensure clean and stable electrical supply.",
+        icon: "cpu",
       },
       {
         title: "Operational Integrity",
         desc: "Ensuring continuous power delivery and electrical stability, essential for maintaining service availability and infrastructure reliability.",
+        icon: "activity",
       },
     ],
   },
@@ -503,26 +548,32 @@ export const servicesData = {
       {
         title: "Firewall Deployment",
         desc: "Next-Generation Firewall (NGFW) implementation with application-aware traffic inspection, threat prevention via IDS/IPS, and policy-based access control.",
+        icon: "globe",
       },
       {
         title: "Routing Infrastructure",
         desc: "Core, distribution, and edge configuration supporting BGP, OSPF, EIGRP, and RIP with redundant HSRP/VRRP dual-homed architectures.",
+        icon: "activity",
       },
       {
         title: "VPN & Secure Connectivity",
         desc: "Site-to-site VPN for multi-branch environments and remote access VPN for distributed workforces, integrated with firewall policies.",
+        icon: "wireless",
       },
       {
         title: "Monitoring & Maintenance",
         desc: "Real-time traffic monitoring, logging, firmware/security patch management, and automated alerting for network anomalies.",
+        icon: "monitor",
       },
       {
         title: "Infrastructure Integration",
         desc: "Seamless integration with servers, storage, switching, and cabling, supporting hybrid and cloud network architectures.",
+        icon: "settings",
       },
       {
         title: "Traffic Engineering",
         desc: "Implementation of Layer 3 routing, VLAN segmentation, ACL enforcement, and QoS policies for prioritized communications.",
+        icon: "globe",
       },
     ],
   },
@@ -550,26 +601,32 @@ export const servicesData = {
       {
         title: "Core Layer Switching",
         desc: "High-throughput Layer 3 switches for backbone connectivity with inter-site traffic integration and multi-chassis stacking support.",
+        icon: "layers",
       },
       {
         title: "Distribution Layer Switching",
         desc: "Aggregation of access layer switches with OSPF/EIGRP protocols, QoS prioritization, and redundant failover mechanisms.",
+        icon: "cpu",
       },
       {
         title: "Access Layer Switching",
         desc: "End-user device connectivity with VLAN segmentation, port-level security (802.1X), and PoE/PoE+ for IP phones and cameras.",
+        icon: "network",
       },
       {
         title: "Network Management",
         desc: "SNMP-based monitoring, configuration version control, and proactive alerting integrated with professional management tools.",
+        icon: "network",
       },
       {
         title: "Stability & Patching",
         desc: "Comprehensive firmware upgrade strategies and patching to ensure long-term network stability and security.",
+        icon: "users",
       },
       {
         title: "Network Design",
         desc: "Architecture utilizing STP/RSTP/MSTP for loop prevention and ACLs for port-level enterprise security.",
+        icon: "network",
       },
     ],
   },
@@ -597,26 +654,32 @@ export const servicesData = {
       {
         title: "Wi-Fi Design & Deployment",
         desc: "Site surveys and access point (AP) placement for optimal coverage in offices and meeting rooms with seamless roaming.",
+        icon: "wireless",
       },
       {
         title: "Performance & Optimization",
         desc: "Dual-band (2.4GHz / 5GHz) support with load balancing across APs and QoS for voice, video, and business applications.",
+        icon: "compliance",
       },
       {
         title: "Secure Access",
         desc: "Enterprise authentication using 802.1X/RADIUS or WPA3, with separate guest networks and VLAN isolation.",
+        icon: "lock",
       },
       {
         title: "Management & Monitoring",
         desc: "Controller-managed or cloud-managed configurations with real-time monitoring of AP performance and connected devices.",
+        icon: "monitor",
       },
       {
         title: "Scalability",
         desc: "Modular expansion for growing offices, allowing for the addition of new APs without disruption to existing users.",
+        icon: "shield",
       },
       {
         title: "Reliability",
         desc: "Redundant AP configurations and simple failover settings to ensure zero-downtime wireless connectivity.",
+        icon: "layers",
       },
     ],
   },
@@ -644,26 +707,32 @@ export const servicesData = {
       {
         title: "Secure Site-to-Site Connectivity",
         desc: "Implementation of IPSec VPN tunnels for encrypted links between corporate sites with support for dynamic BGP/OSPF routing.",
+        icon: "globe",
       },
       {
         title: "Remote Access VPN",
         desc: "Deployment of SSL or IPSec clients for distributed workforces with RADIUS/AAA server integration and MFA enforcement.",
+        icon: "wireless",
       },
       {
         title: "Encryption & Policy",
         desc: "Strong suite encryption (AES-256, SHA2) with split or full tunneling configurations aligned with firewall ACL rules.",
+        icon: "activity",
       },
       {
         title: "Scalability & Performance",
         desc: "Clustered VPN gateways supporting simultaneous sessions with bandwidth allocation and QoS rules for critical apps.",
+        icon: "support",
       },
       {
         title: "Monitoring & Maintenance",
         desc: "Detailed logging of session events and tunnel health with regular firmware patching and SIEM visibility integration.",
+        icon: "monitor",
       },
       {
         title: "Failover Resilience",
         desc: "Redundant VPN termination points to ensure continued site connectivity in the event of a gateway failure.",
+        icon: "alert",
       },
     ],
   },
@@ -687,30 +756,38 @@ export const servicesData = {
       "Clean Rack Management",
     ],
 
+    // Yahan se start karna hai.
+
     features: [
       {
         title: "Cabling Standards & Design",
         desc: "System design based on TIA/EIA and ISO/IEC standards, selecting Cat6/Cat6A/Cat7 copper and OM3/OM4 fiber.",
+        icon: "network",
       },
       {
         title: "Copper Cabling Implementation",
         desc: "Horizontal and backbone installation with RJ45 terminations, patch panels, and full support for PoE/PoE+ devices.",
+        icon: "activity",
       },
       {
         title: "Fiber Optic Implementation",
         desc: "Singlemode and multimode termination with LC/SC connectors, polarity verification, and backbone distribution.",
+        icon: "zap",
       },
       {
         title: "Testing & Quality Assurance",
         desc: "Certification testing via Fluke for copper and OTDR/Power meter testing for fiber links with full documentation.",
+        icon: "settings",
       },
       {
         title: "Documentation & Maintenance",
         desc: "Provision of as-built cabling diagrams, cable schedules, rack elevations, and future expansion recommendations.",
+        icon: "monitor",
       },
       {
         title: "Clean Topology",
         desc: "Professional rack and cable management layout following global best practices for airflow and accessibility.",
+        icon: "shield",
       },
     ],
   },
@@ -738,26 +815,32 @@ export const servicesData = {
       {
         title: "Audio/Video Integration",
         desc: "Installation of conference cameras, microphones, and speakers with support for USB, HDMI, and network-based AV connectivity. Audio includes echo cancellation and noise suppression.",
+        icon: "monitor",
       },
       {
         title: "Control Systems",
         desc: "Centralized room control via touch panels or networked devices, allowing seamless source switching between laptops, codecs, and AV streams.",
+        icon: "cpu",
       },
       {
         title: "Video Conferencing Platforms",
         desc: "Deployment and configuration of Cisco Webex, Microsoft Teams Rooms, Zoom Rooms, or SIP/H.323 endpoints for enterprise collaboration.",
+        icon: "users",
       },
       {
         title: "Advanced Video Hardware",
         desc: "Support for PTZ (Pan-Tilt-Zoom) cameras and high-definition streaming peripherals integrated into boardrooms and meeting spaces.",
+        icon: "compliance",
       },
       {
         title: "Network Quality Management",
         desc: "Architecture design ensuring low latency and packet prioritization (QoS) for critical streams to maintain stable conferencing.",
+        icon: "network",
       },
       {
         title: "Monitoring & Maintenance",
         desc: "Continuous system monitoring and regular firmware updates to maintain optimal performance and hardware reliability.",
+        icon: "monitor",
       },
     ],
   },
@@ -785,26 +868,32 @@ export const servicesData = {
       {
         title: "Camera Installation & Positioning",
         desc: "IP camera placement planning for coverage areas and critical sightlines, including support for fixed, PTZ, and IR/night vision models.",
+        icon: "monitor",
       },
       {
         title: "Storage & Retention Planning",
         desc: "Provisioning of NVR/SAN storage with automated overwrite settings, strict retention policies, and RAID planning for data resiliency.",
+        icon: "database",
       },
       {
         title: "Network Considerations",
         desc: "Configuration of PoE switches for camera power, VLAN segregation for CCTV traffic, and bandwidth allocation for real-time video streams.",
+        icon: "network",
       },
       {
         title: "Sightline Analysis",
         desc: "Detailed planning to ensure critical areas are covered without blind spots, utilizing advanced camera models for different environments.",
+        icon: "layers",
       },
       {
         title: "VMS Integration",
         desc: "Implementation of centralized video management systems that unify multiple streams into a single dashboard for security teams.",
+        icon: "activity",
       },
       {
         title: "Secure Data Handling",
         desc: "Encryption of video data and restricted access protocols to ensure surveillance footage remains secure and compliant.",
+        icon: "support",
       },
     ],
   },
@@ -832,26 +921,32 @@ export const servicesData = {
       {
         title: "SIP/IP Phone Hardware",
         desc: "Deployment of specialized phones for desktops, conference rooms, and executive offices with multi-line and voicemail support.",
+        icon: "server",
       },
       {
         title: "Telephony Integration",
         desc: "Seamless integration with on-premises IP PBX systems or cloud-based telephony platforms for flexible enterprise communications.",
+        icon: "globe",
       },
       {
         title: "Voice Traffic Prioritization",
         desc: "Implementation of VLAN and QoS support to ensure voice traffic is prioritized across the network, eliminating jitter and lag.",
+        icon: "users",
       },
       {
         title: "Advanced Calling Features",
         desc: "Full support for voicemail, call forwarding, multi-line management, and automated attendants to improve office productivity.",
+        icon: "zap",
       },
       {
         title: "Secure Voice Connectivity",
         desc: "Ensuring secure communication through network authentication and encrypted signaling for sensitive business conversations.",
+        icon: "activity",
       },
       {
         title: "Centralized Management",
         desc: "Easy deployment and monitoring with centralized user configuration, allowing for upgrades with minimal business disruption.",
+        icon: "lock",
       },
     ],
   },
@@ -879,26 +974,32 @@ export const servicesData = {
       {
         title: "Firewall & Router Protection",
         desc: "Configuration and management of enterprise firewalls and routers to enforce security policies, control traffic, and protect against external threats.",
+        icon: "shield",
       },
       {
         title: "VPN & Secure Remote Access",
         desc: "Deployment of site-to-site and remote access VPNs for encrypted communication between offices and remote users.",
+        icon: "lock",
       },
       {
         title: "Intrusion Detection & Prevention",
         desc: "Continuous monitoring and blocking of unauthorized access attempts or malicious network activity to safeguard infrastructure.",
+        icon: "support",
       },
       {
         title: "Endpoint Protection",
         desc: "Antivirus, anti-malware, and endpoint detection solutions (EDR) to protect desktops, laptops, and servers from internal and external threats.",
+        icon: "network",
       },
       {
         title: "Network Monitoring",
         desc: "Real-time monitoring of network performance and security events to identify anomalies and maintain operational continuity.",
+        icon: "monitor",
       },
       {
         title: "Scalable Implementation",
         desc: "Configurable solutions for medium to large enterprise environments, integrated with existing network infrastructure with minimal disruption.",
+        icon: "compliance",
       },
     ],
 
@@ -940,26 +1041,32 @@ export const servicesData = {
       {
         title: "Threat Prevention",
         desc: "Proactively stopping cyberattacks before they can impact cloud workloads, databases, or critical business operations.",
+        icon: "shield",
       },
       {
         title: "Incident Response & Recovery",
         desc: "Planning and implementing strategies to quickly contain and recover from security breaches in cloud-hosted environments.",
+        icon: "alert",
       },
       {
         title: "Data Protection & Encryption",
         desc: "Securing sensitive data at rest and in transit using advanced encryption and tokenization methods to ensure total privacy.",
+        icon: "lock",
       },
       {
         title: "Identity Management",
         desc: "Role-based permissions, multi-factor authentication (MFA), and secure identity federation for all enterprise cloud applications.",
+        icon: "search",
       },
       {
         title: "Compliance & Monitoring",
         desc: "Continuous auditing, logging, and reporting to meet regulatory requirements and internal enterprise security policies.",
+        icon: "compliance",
       },
       {
         title: "Scalable Protection",
         desc: "Ensuring that cloud-hosted applications and storage remain protected as your digital infrastructure grows and expands.",
+        icon: "monitor",
       },
     ],
   },
@@ -987,26 +1094,32 @@ export const servicesData = {
       {
         title: "Network Penetration Testing",
         desc: "Assessing internal and external networks for weaknesses, misconfigurations, and exploitable vulnerabilities.",
+        icon: "alert",
       },
       {
         title: "Application Security Testing",
         desc: "Identifying vulnerabilities in web, mobile, and enterprise applications, including SQL injection, XSS, and authentication issues.",
+        icon: "shield",
       },
       {
         title: "Wireless Network Testing",
         desc: "Evaluating Wi-Fi and wireless infrastructure for potential access points, weak encryption, or rogue devices.",
+        icon: "network",
       },
       {
         title: "Social Engineering Assessments",
         desc: "Testing organizational awareness and employee susceptibility to phishing and other social engineering attacks.",
+        icon: "compliance",
       },
       {
         title: "Cloud Penetration Testing",
         desc: "Assessing security configurations, access controls, and vulnerabilities in cloud environments including IaaS, PaaS, and SaaS.",
+        icon: "cloud",
       },
       {
         title: "Actionable Reporting",
         desc: "Providing IT teams with detailed insights and remediation steps while minimizing disruption to business operations.",
+        icon: "support",
       },
     ],
   },
@@ -1034,26 +1147,32 @@ export const servicesData = {
       {
         title: "Risk Assessments & Audits",
         desc: "Identifying vulnerabilities in networks, processes, and applications, prioritizing mitigation based on potential business impact.",
+        icon: "compliance",
       },
       {
         title: "Policy Development",
         desc: "Designing enterprise security policies, procedures, and standards aligned with global industry best practices.",
+        icon: "search",
       },
       {
         title: "Regulatory Compliance",
         desc: "Assisting with compliance frameworks such as ISO 27001, NESA, GDPR, and other specific UAE regulatory requirements.",
+        icon: "support",
       },
       {
         title: "Security Strategy Planning",
         desc: "Creating roadmaps for implementing security technologies, continuous monitoring, and incident response capabilities.",
+        icon: "shield",
       },
       {
         title: "Awareness & Training",
         desc: "Educating staff on security policies, threat recognition, and safe practices to reduce organizational risk from the human element.",
+        icon: "alert",
       },
       {
         title: "Remediation Roadmaps",
         desc: "Providing detailed assessment reports highlighting risks and prioritizing corrective actions for short-term and long-term initiatives.",
+        icon: "support",
       },
     ],
 
@@ -1096,26 +1215,32 @@ export const servicesData = {
       {
         title: "Platform Implementation & Rollout",
         desc: "Expertise in full-scale platform deployment and rollout, ensuring a solid foundation for your digital workflows.",
+        icon: "monitor",
       },
       {
         title: "Module Configuration & Customization",
         desc: "Tailoring ServiceNow modules to your specific business requirements through expert configuration and customization.",
+        icon: "activity",
       },
       {
         title: "Process Automation",
         desc: "Modernizing legacy manual processes into automated, efficient digital workflows to drive productivity.",
+        icon: "support",
       },
       {
         title: "Platform Optimization",
         desc: "Continuous improvement and tuning of your existing ServiceNow environment to maximize performance and value.",
+        icon: "wireless",
       },
       {
         title: "CMDB Remediation & Governance",
         desc: "Specialized focus on CMDB architecture design, remediation, and data quality improvement to ensure a single source of truth.",
+        icon: "settings",
       },
       {
         title: "Service Alignment & Integration",
         desc: "Aligning ITSM, ITOM, and ITBM modules while providing seamless system integrations with your existing technology stack.",
+        icon: "lock",
       },
     ],
 
