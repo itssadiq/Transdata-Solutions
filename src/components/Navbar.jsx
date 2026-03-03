@@ -4,6 +4,29 @@ import { Menu } from "lucide-react";
 import DesktopMenu from "./navbar/DesktopMenu";
 import MobileMenu from "./navbar/MobileMenu";
 import Logo from "../assets/LOGO_1.png";
+import AMC from "../assets/IT-AMC.webp";
+import Office from "../assets/New-Office.webp";
+import dataCenter from "../assets/Data-center-relocation.webp";
+import serverStorage from "../assets/Server-storage.webp";
+import itConsultation from "../assets/IT-consultation.webp";
+import itPenetration from "../assets/IT-penetration-testing.webp";
+import switching from "../assets/Switching.webp";
+import firewall from "../assets/Firewall-routers.webp";
+import nasStorage from "../assets/NAS-Storage-solution.webp";
+import virtualization from "../assets/Virtualization.jpg";
+import ups from "../assets/ups-solution.jpg";
+import wifi from "../assets/wifi.jpg";
+import vpn from "../assets/vpn.jpg";
+import cabling from "../assets/cabling.jpg";
+import endpointProtection from "../assets/endpoint-protection.jpg";
+import cloudSecurity from "../assets/cloud-security.jpg";
+import cyberConsulting from "../assets/cyber-consulting.jpg";
+import disasterRecovery from "../assets/disaster-recovery.jpg";
+import automatedBackup from "../assets/automated-backup.jpg";
+import ipPhone from "../assets/ip-phone.jpg";
+import conferenceSolution from "../assets/conference-solution.jpg";
+import cctv from "../assets/cctv.jpg";
+import talentSolutions from "../assets/talent-solutions.jpg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,22 +59,22 @@ const Navbar = () => {
         {
           name: "IT AMC Service",
           link: "/services/it-amc-services",
-          img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400",
+          img: AMC,
         },
         {
           name: "New Office IT Setup",
           link: "/services/new-office-it-setup",
-          img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400",
+          img: Office,
         },
         {
           name: "IT Consultation Services",
           link: "/services/it-consultation-services",
-          img: "https://plus.unsplash.com/premium_photo-1661757847367-65ff2ae7c8af?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: itConsultation,
         },
         {
           name: "Datacenter Relocation",
           link: "/services/datacenter-migration-relocation",
-          img: "https://plus.unsplash.com/premium_photo-1661386266452-54ebeaf7339d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: dataCenter,
         },
       ],
     },
@@ -62,22 +85,22 @@ const Navbar = () => {
         {
           name: "Servers & Storage Solutions",
           link: "/services/server-storage-solutions",
-          img: "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg",
+          img: serverStorage,
         },
         {
           name: "NAS Storage Solutions",
           link: "/services/nas-storage-solutions",
-          img: "https://images.unsplash.com/photo-1622548066678-a25ead9d3849?q=80&w=400",
+          img: nasStorage,
         },
         {
           name: "Virtualization",
           link: "/services/virtualization-hci",
-          img: "https://images.unsplash.com/photo-1758523670318-f1b79559e1d1?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: virtualization,
         },
         {
           name: "UPS Solutions",
           link: "/services/power-backup-ups",
-          img: "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+          img: ups,
         },
       ],
     },
@@ -88,27 +111,27 @@ const Navbar = () => {
         {
           name: "Firewall Routers",
           link: "/services/firewall-router-solutions",
-          img: "https://images.unsplash.com/photo-1546124404-9e7e3cac2ec1?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: firewall,
         },
         {
           name: "Switching",
           link: "/services/switching-solutions",
-          img: "https://images.unsplash.com/photo-1752595883241-f7c69d5092cb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: switching,
         },
         {
           name: "Wifi Services",
           link: "/services/wireless-network-services",
-          img: "https://plus.unsplash.com/premium_photo-1683758343999-0975ec01d0cc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: wifi,
         },
         {
           name: "VPN Solutions",
           link: "/services/vpn-solutions",
-          img: "https://images.pexels.com/photos/5243610/pexels-photo-5243610.jpeg",
+          img: vpn,
         },
         {
           name: "Structured Cabling",
           link: "/services/structured-cabling-solutions",
-          img: "https://images.pexels.com/photos/5658532/pexels-photo-5658532.jpeg",
+          img: cabling,
         },
       ],
     },
@@ -119,22 +142,22 @@ const Navbar = () => {
         {
           name: "Enterprise Network & Endpoint Protection",
           link: "/services/network-endpoint-protection",
-          img: "https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: endpointProtection,
         },
         {
           name: "Cloud Security Solutions",
           link: "/services/cloud-security-solutions",
-          img: "https://plus.unsplash.com/premium_photo-1700830193301-99e1c863ee38?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: cloudSecurity,
         },
         {
           name: "Penetration Testing Services",
           link: "/services/penetration-testing-services",
-          img: "https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg",
+          img: itPenetration,
         },
         {
           name: "Cybersecurity Consulting & Compliance",
           link: "/services/cybersecurity-consulting-compliance",
-          img: "https://images.unsplash.com/photo-1768839721176-2fa91fdce725?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: cyberConsulting,
         },
       ],
     },
@@ -145,12 +168,12 @@ const Navbar = () => {
         {
           name: "Disaster Recovery",
           link: "/services/data-backup-protection",
-          img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
+          img: disasterRecovery,
         },
         {
           name: "Automated Backup",
           link: "/services/data-backup-protection",
-          img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=400",
+          img: automatedBackup,
         },
       ],
     },
@@ -161,17 +184,17 @@ const Navbar = () => {
         {
           name: "IP Phone solutions",
           link: "/services/ip-phone-solutions",
-          img: "https://images.pexels.com/photos/5146492/pexels-photo-5146492.jpeg",
+          img: ipPhone,
         },
         {
           name: "Conference solutions",
           link: "/services/conference-solutions",
-          img: "https://images.pexels.com/photos/3184632/pexels-photo-3184632.jpeg",
+          img: conferenceSolution,
         },
         {
           name: "CCTV surveillance system",
           link: "/services/cctv-surveillance",
-          img: "https://plus.unsplash.com/premium_photo-1749255441533-a04bb85f88d1?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: cctv,
         },
       ],
     },
@@ -182,7 +205,7 @@ const Navbar = () => {
         {
           name: "ServiceNow Expertise",
           link: "/services/servicenow-expertise",
-          img: "https://images.unsplash.com/photo-1590402494587-44b71d7772f6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          img: talentSolutions,
         },
       ],
     },
