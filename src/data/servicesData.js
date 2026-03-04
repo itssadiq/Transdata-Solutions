@@ -1,3 +1,25 @@
+import IT_AMC from "../assets/IT-AMC.webp";
+import New_Office from "../assets/New-Office.webp";
+import IT_Consultation from "../assets/IT-consultation.webp";
+import Data_Center from "../assets/Data-center-relocation.webp";
+import Server_Storage from "../assets/Server-storage.webp";
+import NAS_Storage from "../assets/NAS-Storage-solution.webp";
+import Virtualization from "../assets/Virtualization.jpg";
+import Ups_Solution from "../assets/Ups-solution.jpg";
+import Firewall_Routers from "../assets/Firewall-routers.webp";
+import Switching from "../assets/Switching.webp";
+import Wifi from "../assets/wifi.jpg";
+import Vpn from "../assets/vpn.jpg";
+import Structured_Cabling from "../assets/cabling.jpg";
+import Endpoint_Protection from "../assets/endpoint-protection.jpg";
+import Cloud_Security from "../assets/cloud-security.jpg";
+import IT_Penetration_Testing from "../assets/IT-penetration-testing.webp";
+import Cyber_Consulting from "../assets/cyber-consulting.jpg";
+import Ip_Phone from "../assets/ip-phone.jpg";
+import Conference_Solution from "../assets/conference-solution.jpg";
+import CCTV from "../assets/cctv.jpg";
+import Talent_Solutions from "../assets/talent-solutions.jpg";
+
 export const servicesData = {
   // SUB-CATEGORY 1: IT AMC SERVICE
   "it-amc-services": {
@@ -5,8 +27,7 @@ export const servicesData = {
     title2: "Services",
     subtitle: "Business Continuity",
     desc: "13+ years of enterprise IT experience providing stability, security, and well-maintained environments through Annual Maintenance Contracts.",
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000",
+    image: IT_AMC,
 
     overview:
       "Modern businesses require stable, secure, and well-maintained IT environments. Unplanned downtime, aging hardware, and delayed support can disrupt operations and productivity. Transdata Solutions offers IT Annual Maintenance Contract (AMC) services to keep your infrastructure reliable and up to date. We proactively maintain systems, minimize risks, and ensure operational continuity—allowing internal IT teams to focus on strategic initiatives.",
@@ -73,8 +94,7 @@ export const servicesData = {
     title2: "IT Setup",
     subtitle: "Seamless Deployment",
     desc: "End-to-end office IT deployment tailored to your business needs. Ensuring a technology foundation that supports collaboration and maximizes productivity.",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000",
+    image: New_Office,
 
     overview:
       "Setting up a new office requires a robust, reliable, and scalable IT infrastructure. At Transdata Solutions, we deliver end-to-end office IT deployment tailored to your business needs. As a trusted Office IT Setup Service Provider in Dubai, we ensure your technology foundation supports seamless operations, enhances collaboration, and maximizes productivity.",
@@ -183,8 +203,7 @@ export const servicesData = {
     title2: "Consultation",
     subtitle: "Expert Guidance",
     desc: "Aligning technology with strategic goals. We partner with organizations to optimize IT environments, improve performance, and drive digital growth.",
-    image:
-      "https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&q=80&w=2000",
+    image: IT_Consultation,
 
     overview:
       "At Transdata Solutions, we provide expert IT consulting to help businesses in Dubai, and across the UAE align technology with strategic goals. Our consultants partner with organizations of all sizes — from SMEs to large enterprises — to optimize IT environments, improve performance, and drive digital growth. We cover the full IT landscape, blending local market insight with global best practices.",
@@ -251,8 +270,7 @@ export const servicesData = {
     title2: "Migration",
     subtitle: "Seamless Transition",
     desc: "Ensuring a seamless transition of critical IT infrastructure. We plan, execute, and validate every phase to minimize risk and operational impact.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000",
+    image: Data_Center,
 
     overview:
       "Ensure a seamless transition of your critical IT infrastructure with professional Data Center Migration & Relocation Services. Our expert team plans, executes, and validates every phase to minimize risk, downtime, and operational impact — so your business stays efficient, secure, and future-ready.",
@@ -319,8 +337,7 @@ export const servicesData = {
     title2: "Storage Solutions",
     subtitle: "Resilient Foundation",
     desc: "Reliable, scalable, and high-performance server and storage infrastructure designed to support modern business demands across Dubai and the UAE.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000",
+    image: Server_Storage,
 
     overview:
       "At Transdata Solutions, we deliver reliable, scalable, and high-performance server and storage infrastructure designed to support modern business demands across Dubai, and the UAE. Our solutions ensure secure data management, optimized workload performance, and a resilient foundation for your critical applications. We offer customized datacenter infrastructure services — from design and deployment to ongoing management — enabling organizations to enhance uptime, improve resource utilization, and reduce operational costs. Our certified experts follow global best practices to ensure your IT environment is efficient, secure, and future-ready.",
@@ -372,8 +389,7 @@ export const servicesData = {
     title2: "Solutions",
     subtitle: "Centralized Data",
     desc: "Enterprise-grade Network Attached Storage (NAS) platforms designed for reliable access, collaboration, and resilient data protection.",
-    image:
-      "https://images.unsplash.com/photo-1600267185393-e158a98703de?auto=format&fit=crop&q=80&w=2000",
+    image: NAS_Storage,
 
     overview:
       "At Transdata Solutions, we deliver secure, scalable, and high-performance Network Attached Storage (NAS) solutions designed for businesses across Dubai, and the UAE. Our enterprise-grade storage platforms consolidate critical data into a centralized system that supports reliable access, streamlined collaboration, and resilient data protection across your organization. We partner with leading NAS technology vendors to provide tailored implementations that align with your data growth, performance expectations, and compliance needs — from initial design and installation to configuration, optimization, and support.",
@@ -425,8 +441,7 @@ export const servicesData = {
     title2: "& HCI",
     subtitle: "Software-Defined IT",
     desc: "Abstracting compute, storage, and networking resources into unified architectures with centralized management and simplified scaling.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000",
+    image: Virtualization,
 
     overview:
       "Virtualization and Hyper-Converged Infrastructure (HCI) form the foundation of modern data center architecture by abstracting compute, storage, and networking resources into software-defined platforms. These technologies enable centralized management, operational efficiency, high availability, and scalable infrastructure design across enterprise environments. Our solutions support organizations in designing, implementing, and operating virtualized and hyper-converged environments that improve infrastructure utilization, simplify management, and support business-critical workloads.",
@@ -478,8 +493,7 @@ export const servicesData = {
     title2: "& UPS Solutions",
     subtitle: "Continuous Stability",
     desc: "Ensuring stable power delivery and maintaining operational continuity during utility outages and power fluctuations.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000",
+    image: Ups_Solution,
 
     overview:
       "Power continuity is a critical component of enterprise IT and data center infrastructure. Power Backup and Uninterruptible Power Supply (UPS) systems ensure stable power delivery, protect critical equipment from electrical disturbances, and maintain operational continuity during utility outages and power fluctuations. Our Power Backup & UPS Solutions are designed to support mission-critical IT infrastructure, data centers, network environments, and enterprise facilities through reliable, scalable, and resilient power protection architectures.",
@@ -531,8 +545,7 @@ export const servicesData = {
     title2: "Router Solutions",
     subtitle: "Perimeter Security",
     desc: "Enterprise-class firewall and routing infrastructure designed for high-availability, secure, and scalable network environments.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000",
+    image: Firewall_Routers,
 
     overview:
       "Transdata Solutions provides enterprise-class firewall and routing infrastructure across Dubai and the UAE, designed for high-availability, secure, and scalable network environments. Solutions cover perimeter security, internal segmentation, routing optimization, and encrypted communications for distributed enterprise IT infrastructure.",
@@ -584,8 +597,7 @@ export const servicesData = {
     title2: "Solutions",
     subtitle: "High-Performance LAN",
     desc: "Enterprise-grade switching infrastructure designed for scalable LAN and WAN environments across core, distribution, and access layers.",
-    image:
-      "https://images.unsplash.com/photo-1544197150-b99a580bbcbf?auto=format&fit=crop&q=80&w=2000",
+    image: Switching,
 
     overview:
       "Transdata Solutions delivers enterprise-grade switching infrastructure across Dubai and the UAE, designed for scalable, high-performance LAN and WAN environments. Our solutions cover core, distribution, and access layers, ensuring optimized connectivity, low latency, and high availability for business-critical applications.",
@@ -637,8 +649,7 @@ export const servicesData = {
     title2: "Network Services",
     subtitle: "Secure Connectivity",
     desc: "Reliable, secure, and scalable Wi-Fi solutions for offices, campuses, and enterprise environments across the UAE.",
-    image:
-      "https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?auto=format&fit=crop&q=80&w=2000",
+    image: Wifi,
 
     overview:
       "Transdata Solutions provides enterprise-class wireless network solutions across Dubai and the UAE. Our solutions focus on reliable, secure, and scalable Wi-Fi connectivity for offices, campuses, and medium-scale enterprise environments. We design networks that ensure smooth connectivity for everyday business applications while keeping management simple.",
@@ -690,8 +701,7 @@ export const servicesData = {
     title2: "Solutions",
     subtitle: "Secure Remote Access",
     desc: "Encrypted communication infrastructure between sites and remote users aligned with enterprise security policies.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2000",
+    image: Vpn,
 
     overview:
       "Transdata Solutions provides enterprise VPN infrastructure and secure remote connectivity across Dubai and the UAE. These solutions support encrypted communication between sites and remote users while aligning with existing network security and access control policies.",
@@ -743,8 +753,7 @@ export const servicesData = {
     title2: "Cabling Solutions",
     subtitle: "Physical Layer Topology",
     desc: "Clean physical layer design and reliable signal integrity supporting current and future enterprise network requirements.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000",
+    image: Structured_Cabling,
 
     overview:
       "Transdata Solutions delivers structured cabling infrastructure for enterprise environments across Dubai and the UAE. Solutions are designed for clean physical layer topology, reliable signal integrity, and support for current and future network requirements.",
@@ -798,8 +807,7 @@ export const servicesData = {
     title2: "Solutions",
     subtitle: "Enterprise AV Integration",
     desc: "Advanced conferencing infrastructure for boardrooms and collaborative spaces, focused on performance and centralized control.",
-    image:
-      "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&q=80&w=2000",
+    image: Conference_Solution,
 
     overview:
       "Transdata Solutions provides enterprise conferencing infrastructure for meeting rooms, boardrooms, and collaborative spaces across Dubai and the UAE. The solution focuses on reliable audio/video performance, interoperability, and centralized control. We deploy cameras, microphones, speakers, and displays integrated over existing LAN/WAN networks, supporting both on-premises and cloud video conferencing platforms.",
@@ -851,8 +859,7 @@ export const servicesData = {
     title2: "Surveillance",
     subtitle: "Secure Monitoring",
     desc: "Enterprise-grade surveillance systems designed for reliable monitoring, recording, and secure centralized management.",
-    image:
-      "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=2000",
+    image: CCTV,
 
     overview:
       "Transdata Solutions delivers enterprise-grade CCTV systems across Dubai and the UAE, designed for reliable monitoring, recording, and secure storage. Solutions include IP cameras, NVRs, and centralized video management systems integrated over LAN/WAN networks for real-time monitoring.",
@@ -904,8 +911,7 @@ export const servicesData = {
     title2: "Solutions",
     subtitle: "Scalable Voice",
     desc: "Consistent call quality, secure connectivity, and centralized management for enterprise office environments of all sizes.",
-    image:
-      "https://images.unsplash.com/photo-1520923179273-035d87f709d5?auto=format&fit=crop&q=80&w=2000",
+    image: Ip_Phone,
 
     overview:
       "Transdata Solutions provides enterprise IP phone solutions across Dubai and the UAE, enabling reliable and scalable voice communication over data networks. Our solutions integrate with existing LAN/WAN infrastructure, ensuring consistent call quality and security.",
@@ -957,8 +963,7 @@ export const servicesData = {
     title2: "Endpoint Protection",
     subtitle: "Infallible Security",
     desc: "Safeguarding LAN/WAN infrastructure, servers, and endpoints across the UAE with advanced threat prevention and real-time monitoring.",
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000",
+    image: Endpoint_Protection,
 
     overview:
       "In today’s interconnected environments, safeguarding LAN/WAN infrastructure, servers, and endpoints is critical to maintaining business continuity. Transdata Solutions provides comprehensive network and endpoint security across Dubai and the UAE, combining advanced threat prevention, real-time monitoring, and centralized management to ensure visibility, control, and uninterrupted operations for enterprise IT systems.",
@@ -1024,8 +1029,7 @@ export const servicesData = {
     title2: "Solutions",
     subtitle: "Protected Workloads",
     desc: "Comprehensive security, compliance, and visibility across public, private, and hybrid cloud environments.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000",
+    image: Cloud_Security,
 
     overview:
       "Enterprises are increasingly adopting cloud services, making security, compliance, and visibility across cloud workloads critical. Transdata Solutions delivers comprehensive cloud security solutions across Dubai and the UAE, helping organizations prevent incidents, respond to breaches, and safeguard sensitive data in public, private, and hybrid cloud environments. Our approach focuses on continuous monitoring, threat prevention, and secure access, ensuring that cloud-hosted applications remain protected without compromising performance.",
@@ -1077,8 +1081,7 @@ export const servicesData = {
     title2: "Testing Services",
     subtitle: "Vulnerability Discovery",
     desc: "Identifying vulnerabilities in networks, applications, and systems before they can be exploited by attackers.",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2000",
+    image: IT_Penetration_Testing,
 
     overview:
       "Transdata Solutions provides enterprise-grade penetration testing services across Dubai and the UAE, designed to identify vulnerabilities in networks, applications, and systems before they can be exploited by attackers. Our services help organizations strengthen their security posture, meet compliance requirements, and proactively reduce risk. Our approach combines technical expertise, industry-standard testing methodologies, and detailed reporting.",
@@ -1130,8 +1133,7 @@ export const servicesData = {
     title2: "Consulting",
     subtitle: "Regulatory Alignment",
     desc: "Helping organizations assess risks, implement controls, and align with UAE regulatory requirements (NESA, ISO 27001, GDPR).",
-    image:
-      "https://images.unsplash.com/photo-1454165833767-027ffea9e778?auto=format&fit=crop&q=80&w=2000",
+    image: Cyber_Consulting,
 
     overview:
       "Transdata Solutions provides enterprise cybersecurity consulting and compliance services across Dubai and the UAE. We work closely with your IT team to understand your infrastructure, operational workflows, and regulatory obligations, providing tailored recommendations that balance security with operational efficiency.",
@@ -1198,8 +1200,7 @@ export const servicesData = {
     title2: "Expertise",
     subtitle: "Talent Solutions",
     desc: "Transforming ServiceNow into Real Business Value with highly skilled, certified professionals who help organizations design, implement, optimize, and scale their platforms.",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000",
+    image: Talent_Solutions,
 
     overview:
       "At Transdata Talent Solutions, we provide highly skilled, certified ServiceNow professionals who help organizations design, implement, optimize, and scale their ServiceNow platforms. Our focus is not just on deployment — but on delivering operational efficiency, automation, visibility, and long-term value through best-practice aligned ServiceNow solutions. Whether you need implementation support, optimization, managed services, or expert consulting, our dedicated ServiceNow talent resources integrate seamlessly with your teams to accelerate outcomes.",
