@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactGrid from "../components/contact/ContactGrid";
 import Map from "../components/contact/Map";
 import PageHero from "../components/PageHero";
+import ContactImg from "../assets/Contact.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,7 @@ const Contact = () => {
         title="Let's Start a"
         highlight="Conversation."
         description="Have a project in mind? We are ready..."
-        bgImage="..."
+        bgImage={ContactImg}
       />
 
       {/* 2. CONTACT GRID */}
