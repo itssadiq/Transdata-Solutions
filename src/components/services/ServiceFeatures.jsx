@@ -64,13 +64,6 @@ const ServiceFeatures = ({ features }) => {
               What We Deliver
             </h3>
           </div>
-          <div className="flex items-end">
-            <p className="text-gray-600 leading-relaxed font-medium">
-              We provide end-to-end IT solutions designed to optimize your
-              infrastructure, strengthen security, and ensure your business
-              operations remain uninterrupted and scalable.
-            </p>
-          </div>
         </div>
 
         {/* Feature Grid */}

@@ -109,7 +109,7 @@ export const servicesData = {
     features: [
       {
         title: "Foundation for Success",
-        desc: "Partnering with Transdata Solutions means gainning a partner committed to enabling smooth operations through optimized infrastructure.",
+        desc: "Partnering with Transdata Solutions means gaining a partner committed to enabling smooth operations through optimized infrastructure.",
         icon: "support",
       },
       {
