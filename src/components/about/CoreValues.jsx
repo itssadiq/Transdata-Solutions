@@ -8,7 +8,7 @@ const CoreValues = () => {
         <div className="mb-16 reveal-up">
           {/* Label text changed to brand yellow */}
           <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
-            <span className="w-8 h-0.5 bg-td-yellow"></span> 02 // Core Values
+            <span className="w-8 h-0.5 bg-td-yellow"></span> Core Values
           </h2>
           {/* Main heading changed to white */}
           <h3 className="text-4xl font-bold text-white">

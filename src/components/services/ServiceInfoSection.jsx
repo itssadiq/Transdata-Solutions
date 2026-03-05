@@ -18,7 +18,7 @@ const ServiceInfoSection = ({ title, content, listTitle, items, index }) => {
           {/* Main Text Content Block */}
           <div className="lg:w-1/2">
             <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
-              <span className="w-8 h-0.5 bg-black"></span> 0{index + 2} //
+              <span className="w-8 h-0.5 bg-black"></span>
               Insights
             </h2>
             <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6 leading-tight">

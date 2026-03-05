@@ -56,8 +56,8 @@ const ServiceFeatures = ({ features }) => {
         {/* Header - Matching OurStory Hierarchy */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 reveal-up">
           <div>
-            <h2 className="text-xs font-bold text-black mb-6 uppercase tracking-widest flex items-center gap-3">
-              <span className="w-8 h-0.5 bg-td-yellow"></span> 01 //
+            <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
+              <span className="w-8 h-0.5 bg-black"></span>
               Capabilities
             </h2>
             <h3 className="text-4xl font-bold leading-tight">

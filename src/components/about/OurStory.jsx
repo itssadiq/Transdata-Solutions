@@ -5,7 +5,7 @@ const OurStory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 reveal-up">
           <div>
             <h2 className="text-xs font-bold text-td-yellow mb-6 uppercase tracking-widest flex items-center gap-3">
-              <span className="w-8 h-0.5 bg-black"></span> 01 // The Story
+              <span className="w-8 h-0.5 bg-black"></span> The Story
             </h2>
             <h3 className="text-4xl font-bold leading-tight">
               More than just an IT company. We are your strategic growth
