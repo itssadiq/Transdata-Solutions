@@ -12,6 +12,7 @@ import Realestate from "../../assets/real-estate.jpg";
 import OilGas from "../../assets/oil-gas.jpg";
 import Logistics from "../../assets/logistics.jpg";
 import Education from "../../assets/education.jpg";
+import IndustriesVideo from "./IndustriesVideo";
 
 const Industries = () => {
   const [showAll, setShowAll] = useState(false);
@@ -150,6 +151,7 @@ const Industries = () => {
           </button>
         </div>
       </div>
+      <IndustriesVideo />
     </section>
   );
 };
