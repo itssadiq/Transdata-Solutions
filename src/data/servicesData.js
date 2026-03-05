@@ -5,7 +5,7 @@ import Data_Center from "../assets/Data-center-relocation.webp";
 import Server_Storage from "../assets/Server-storage.webp";
 import NAS_Storage from "../assets/NAS-Storage-solution.webp";
 import Virtualization from "../assets/Virtualization.jpg";
-import Ups_Solution from "../assets/Ups-solution.jpg";
+import Ups_Solution from "../assets/ups-solution.jpg";
 import Firewall_Routers from "../assets/Firewall-routers.webp";
 import Switching from "../assets/Switching.webp";
 import Wifi from "../assets/wifi.jpg";
