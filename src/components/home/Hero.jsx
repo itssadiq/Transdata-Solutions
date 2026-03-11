@@ -10,24 +10,24 @@ const HERO_CONTENT = {
       <>
         {" "}
         <span className="text-td-yellow">
-          Building Reliable IT Infrastructure
+          Reliable IT Infrastructure &
         </span>{" "}
-        For Business-Critical Operations{" "}
+        Networking Solutions for Businesses{" "}
       </>
     ),
-    sub: "DESIGNING, DEPLOYING, AND MANAGING SECURE NETWORKS, CLOUD PLATFORMS, AND IT SYSTEMS THAT BUSINESSES DEPEND ON EVERY DAY.",
+    sub: "From network installation and server management to cybersecurity and IT support, we ensure your business technology runs smoothly and securely.",
   },
   2: {
     headline: (
       <>
         {" "}
-        Enterprise-Grade IT Solutions For{" "}
+        IT That Works Quietly in the Background,{" "}
         <span className="text-td-yellow">
-          Secure & Scalable Businesses
+          So You Can Focus on What Matters
         </span>{" "}
       </>
     ),
-    sub: "FROM CORE NETWORKING TO CLOUD AND CYBERSECURITY, WE DELIVER IT SOLUTIONS BUILT FOR PERFORMANCE AND LONG-TERM RELIABILITY.",
+    sub: "We design, manage, and protect the technology your team depends on, reducing downtime and keeping your operations running without disruption.",
   },
 };
 
