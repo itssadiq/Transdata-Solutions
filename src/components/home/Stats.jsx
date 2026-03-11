@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Stats = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".stat-line", {
+        x: -20,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   const statsData = [
     {
       highlight: "13+ Years",
@@ -8,54 +32,52 @@ const Stats = () => {
     },
     {
       highlight: "Mission-Critical",
-      text: "IT Environments",
+      text: "Infrastructure Management",
     },
     {
       highlight: "Security-First",
-      text: "IT Approach",
+      text: "Cybersecurity Approach",
     },
     {
       highlight: "High-Availability",
-      text: "IT Systems",
+      text: "Enterprise IT Systems",
     },
   ];
 
   return (
-    // Standardized py-24 for equal vertical spacing across all sections
-    <section className="w-full bg-white py-20 md:py-24">
-      {/* 1. Main Site Wrapper (Locked to 1400px & Centered) */}
+    <section
+      ref={sectionRef}
+      className="w-full bg-white py-16 md:py-24 border-y border-gray-100"
+    >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        {/* 2. Inner Grid Wrapper (Constrained to 1100px & Centered with mx-auto) */}
-        {/* This creates the "Mid-Screen" symmetry you requested */}
-        <div className="max-w-[1100px]">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-0">
-            {statsData.map((stat, index) => (
-              <div
-                key={index}
-                className={`
-                  flex flex-col justify-center items-center text-center px-4
-                  ${
-                    index !== statsData.length - 1
-                      ? "md:border-r md:border-gray-300"
-                      : ""
-                  }
-                  ${
-                    index !== statsData.length - 1
-                      ? "border-b border-gray-200 pb-8 md:border-b-0 md:pb-0"
-                      : ""
-                  }
-                `}
-              >
-                <h4 className="text-2xl font-extrabold text-td-yellow leading-none mb-3">
+        {/* Using a flex layout that allows items to expand naturally */}
+        <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-8 lg:gap-4">
+          {statsData.map((stat, index) => (
+            <div
+              key={index}
+              className="stat-line flex items-center gap-6 group w-full lg:w-auto"
+            >
+              {/* Vertical Accent Line (The "Professional" Touch) */}
+              <div className="h-12 w-[2px] bg-td-yellow hidden md:block"></div>
+
+              <div className="flex flex-col">
+                {/* 1. Highlight - Using whitespace-nowrap to force one line */}
+                <h4 className="text-2xl md:text-3xl font-black text-black tracking-tighter whitespace-nowrap uppercase">
                   {stat.highlight}
                 </h4>
 
-                <p className="text-black text-sm md:text-base font-bold leading-tight max-w-[200px]">
+                {/* 2. Text - Simple, clean, and no max-width */}
+                <p className="text-gray-500 text-sm md:text-xs font-bold uppercase tracking-widest whitespace-nowrap">
                   {stat.text}
                 </p>
               </div>
-            ))}
-          </div>
+
+              {/* Decorative Divider for Desktop (Except last item) */}
+              {index !== statsData.length - 1 && (
+                <div className="ml-auto hidden xl:block w-px h-4 bg-gray-200"></div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
