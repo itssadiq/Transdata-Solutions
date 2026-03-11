@@ -117,7 +117,7 @@ const Services = () => {
             End-to-End IT Solutions <br className="hidden md:block" /> Under One
             Roof
           </h3>
-          <p className="text-black/70 text-lg md:text-lg font-medium leading-relaxed md:max-w-xl">
+          <p className="text-black/70 text-lg md:text-xl font-medium leading-relaxed md:max-w-xl">
             From strategy to support, we deliver complete IT solutions designed
             for reliability, security, and scalability.
           </p>
