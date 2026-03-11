@@ -32,11 +32,11 @@ const Stats = () => {
     },
     {
       highlight: "Mission-Critical",
-      text: "Infrastructure Management",
+      text: "IT Environements",
     },
     {
       highlight: "Security-First",
-      text: "Cybersecurity Approach",
+      text: "IT Approach",
     },
     {
       highlight: "High-Availability",

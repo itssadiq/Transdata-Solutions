@@ -123,11 +123,11 @@ const Navbar = () => {
           link: "/services/wireless-network-services",
           img: wifi,
         },
-        {
-          name: "VPN Solutions",
-          link: "/services/vpn-solutions",
-          img: vpn,
-        },
+        // {
+        //   name: "VPN Solutions",
+        //   link: "/services/vpn-solutions",
+        //   img: vpn,
+        // },
         {
           name: "Structured Cabling",
           link: "/services/structured-cabling-solutions",
