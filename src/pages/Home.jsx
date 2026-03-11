@@ -13,6 +13,7 @@ import SocialPosts from "../components/home/SocialPosts";
 import Stats from "../components/home/Stats";
 import ContactGrid from "../components/contact/ContactGrid";
 import Quote from "../components/home/Quote";
+import IndustriesVideo from "../components/home/IndustriesVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,6 +95,8 @@ const Home = () => {
 
       {/* INDUSTRIES */}
       <Industries />
+
+      <IndustriesVideo />
 
       {/* Contact Form */}
       <ContactGrid />

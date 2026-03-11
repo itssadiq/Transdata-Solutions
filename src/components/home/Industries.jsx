@@ -90,7 +90,7 @@ const Industries = () => {
         {/* Header Section */}
         <div className="mb-16 md:mb-20">
           <h2 className="text-xs font-bold text-td-yellow mb-4 uppercase tracking-widest flex items-center gap-3">
-            <span className="w-8 h-0.5 bg-td-yellow"></span> Sectors
+            <span className="w-8 h-0.5 bg-td-black"></span> Sectors
           </h2>
           <div className="max-w-4xl">
             <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-6 leading-tight">
@@ -151,7 +151,6 @@ const Industries = () => {
           </button>
         </div>
       </div>
-      <IndustriesVideo />
     </section>
   );
 };
