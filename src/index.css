@@ -89,3 +89,8 @@
     user-select: none;
   }
 }
+
+video {
+  will-change: transform;
+  backface-visibility: hidden;
+}

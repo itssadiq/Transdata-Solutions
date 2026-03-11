@@ -95,9 +95,6 @@ const Home = () => {
       {/* INDUSTRIES */}
       <Industries />
 
-      {/* Contact Form */}
-      <ContactGrid />
-
       {/* PARTNER MARQUEE */}
       <Partners />
 
@@ -106,6 +103,9 @@ const Home = () => {
 
       {/* SOCIAL HUB */}
       <SocialPosts />
+
+      {/* Contact Form */}
+      <ContactGrid />
     </div>
   );
 };
