@@ -16,7 +16,6 @@ import nasStorage from "../assets/NAS-Storage-solution.webp";
 import virtualization from "../assets/Virtualization.jpg";
 import ups from "../assets/ups-solution.jpg";
 import wifi from "../assets/wifi.jpg";
-import vpn from "../assets/vpn.jpg";
 import cabling from "../assets/cabling.jpg";
 import endpointProtection from "../assets/endpoint-protection.jpg";
 import cloudSecurity from "../assets/cloud-security.jpg";

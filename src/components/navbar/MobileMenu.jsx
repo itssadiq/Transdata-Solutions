@@ -143,6 +143,14 @@ const MobileMenu = ({ isOpen, onClose, solutionsData }) => {
             </div>
           </div>
 
+          <NavLink
+            to="/industries"
+            className={mobileLinkClass}
+            onClick={onClose}
+          >
+            Industries
+          </NavLink>
+
           <NavLink to="/about" className={mobileLinkClass} onClick={onClose}>
             About Us
           </NavLink>

@@ -118,6 +118,10 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
         </div>
       </div>
 
+      <NavLink to="/industries" className={linkClass}>
+        Industries
+      </NavLink>
+
       <NavLink to="/about" className={linkClass}>
         About
       </NavLink>

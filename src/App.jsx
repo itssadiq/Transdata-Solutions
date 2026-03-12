@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import ServiceDetail from "./pages/ServiceDetail";
 import Solutions from "./pages/Solutions";
 import ServiceNow from "./pages/ServiceNow";
+import IndustriesPage from "./pages/IndustriesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="solutions" element={<Solutions />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
         <Route path="servicenow-expertise" element={<ServiceNow />} />
+        <Route path="industries" element={<IndustriesPage />} />
       </Route>
     </Routes>
   );
