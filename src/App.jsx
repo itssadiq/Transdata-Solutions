@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ServiceDetail from "./pages/ServiceDetail";
 import Solutions from "./pages/Solutions";
+import ServiceNow from "./pages/ServiceNow";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="solutions" element={<Solutions />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
+        <Route path="servicenow-expertise" element={<ServiceNow />} />
       </Route>
     </Routes>
   );
