@@ -50,17 +50,19 @@ const Stats = () => {
       className="w-full bg-white py-16 md:py-24 border-y border-gray-100"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        {/* Using a flex layout that allows items to expand naturally */}
-        <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-8 lg:gap-4">
+        {/* Wrapper: justify-center on mobile, justify-between on desktop */}
+        <div className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-8 lg:gap-4">
           {statsData.map((stat, index) => (
             <div
               key={index}
-              className="stat-line flex items-center gap-6 group w-full lg:w-auto"
+              // Item: justify-center on mobile, justify-start on desktop
+              className="stat-line flex items-center justify-center lg:justify-start gap-6 group w-full lg:w-auto"
             >
               {/* Vertical Accent Line (The "Professional" Touch) */}
               <div className="h-12 w-[2px] bg-td-yellow hidden md:block"></div>
 
-              <div className="flex flex-col">
+              {/* Text Column: items-center on mobile, items-start on desktop */}
+              <div className="flex flex-col items-center lg:items-start">
                 {/* 1. Highlight - Using whitespace-nowrap to force one line */}
                 <h4 className="text-2xl md:text-3xl font-black text-black tracking-tighter whitespace-nowrap uppercase">
                   {stat.highlight}
