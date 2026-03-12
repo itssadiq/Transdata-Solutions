@@ -83,6 +83,9 @@ const Home = () => {
       {/* Stats Section */}
       <Stats />
 
+      {/* PARTNER MARQUEE */}
+      <Partners />
+
       {/* ABOUT US SECTION */}
       <WhoWeAre />
 
@@ -94,9 +97,6 @@ const Home = () => {
 
       {/* INDUSTRIES */}
       <Industries />
-
-      {/* PARTNER MARQUEE */}
-      <Partners />
 
       {/* INSIGHTS */}
       <Insights />

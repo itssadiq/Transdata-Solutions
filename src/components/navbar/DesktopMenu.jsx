@@ -30,6 +30,10 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
         Home
       </NavLink>
 
+      <NavLink to="/industries" className={linkClass}>
+        Industries
+      </NavLink>
+
       {/* SOLUTIONS MEGA MENU */}
       <div
         className="relative h-full flex items-center"
@@ -117,10 +121,6 @@ const DesktopMenu = ({ scrolled, solutionsData, linkClass }) => {
           </div>
         </div>
       </div>
-
-      <NavLink to="/industries" className={linkClass}>
-        Industries
-      </NavLink>
 
       <NavLink to="/about" className={linkClass}>
         About
