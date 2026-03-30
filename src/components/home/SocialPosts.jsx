@@ -11,18 +11,134 @@ import {
 import logo from "../../assets/LOGO_1.png";
 
 // ==========================================
-// 🔴 PASTE YOUR INSTAGRAM ACCESS TOKEN HERE
+// 📸 IMPORT YOUR DOWNLOADED IMAGES HERE
 // ==========================================
-const INSTAGRAM_ACCESS_TOKEN = "";
+import post1 from "../../assets/instagram/post1.jpg";
+import post2 from "../../assets/instagram/post2.jpg";
+import post3 from "../../assets/instagram/post3.jpg";
+import post4 from "../../assets/instagram/post4.jpg";
+import post5 from "../../assets/instagram/post5.jpg";
+import post6 from "../../assets/instagram/post6.jpg";
+import post7 from "../../assets/instagram/post7.jpg";
+import post8 from "../../assets/instagram/post8.jpg";
+import post9 from "../../assets/instagram/post9.jpg";
+import post10 from "../../assets/instagram/post10.jpg";
 // ==========================================
 
 const CARD_WIDTH = 350;
 const GAP = 24;
-const SCROLL_AMOUNT = CARD_WIDTH + GAP; // 374px
+const SCROLL_AMOUNT = CARD_WIDTH + GAP;
+
+// ==========================================
+// 📝 CONFIGURE YOUR 10 INSTAGRAM POSTS HERE
+// ==========================================
+const INSTAGRAM_POSTS = [
+  {
+    id: 1,
+    caption:
+      "⚠️ Cybersecurity Alert: Stay Protected Against Wiper Malware The UAE Cyber Security Council has issued an important advisory highlighting the rising threat of Wiper Malware—one of the most destructive types of cyberattacks that can erase critical data and disrupt entire systems.", // 👈 Add your caption
+    media_url: post1, // 👈 Replace with: post1
+    permalink:
+      "https://www.instagram.com/p/DWVguSGDGj9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2026-03-26",
+    like_count: 2,
+  },
+  {
+    id: 2,
+    caption:
+      "As your team grows, your network must grow stronger too. 🚀🔐 At Transdata Solutions, we deliver advanced Firewall Solutions designed to protect your expanding IT environment from evolving cyber threats. Whether you're onboarding new employees, opening new branches, or enabling secure remote access, your security should scale with your business.", // 👈 Add your caption
+    media_url: post2, // 👈 Replace with: post2
+    permalink:
+      "https://www.instagram.com/p/DVf-TkajfGl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2026-03-05",
+    like_count: 1,
+  },
+  {
+    id: 3,
+    caption:
+      "🚨 Cyber Awareness Alert 🚨 Nearly 40% of users in the UAE have faced privacy breaches due to oversharing personal information on social media. Irresponsible posting puts individuals and businesses at risk of fraud, identity theft, and digital scams. Robust digital safeguards, cautious sharing habits, and strong cybersecurity practices are more essential than ever. Stay safe online! 💻🔒", // 👈 Add your caption
+    media_url: post3, // 👈 Replace with: post3
+    permalink:
+      "https://www.instagram.com/p/DVdO5JEDR8U/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2026-03-04",
+    like_count: 0,
+  },
+  {
+    id: 4,
+    caption:
+      "🔐 16 Billion Passwords Leaked. Yes—Apple, Google, Facebook, and possibly yours. Your business accounts could already be exposed. Reused passwords, weak access policies, and unaware staff are open doors for attackers.", // 👈 Add your caption
+    media_url: post4, // 👈 Replace with: post4
+    permalink:
+      "https://www.instagram.com/p/DLXCMsDtwrC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2025-06-26",
+    like_count: 3,
+  },
+  {
+    id: 5,
+    caption:
+      "🚨 Gunra Ransomware: The New Threat You Can’t Ignore A Conti-based threat targeting Windows systems, Gunra encrypts, exfiltrates, and demands double extortion via Tor. From .ENCRT file locks to R3ADM3.txt ransom notes, it’s actively hitting sectors like healthcare, real estate, and manufacturing — putting sensitive data and trust at risk.", // 👈 Add your caption
+    media_url: post5, // 👈 Replace with: post5
+    permalink:
+      "https://www.instagram.com/p/DKzSdNXNiW0/?utm_source=ig_web_copy_link", // 👈 Add Instagram post link
+    timestamp: "2025-06-12",
+    like_count: 3,
+  },
+  {
+    id: 6,
+    caption:
+      "🚨🚨 Microsoft Employees' Data was Recently Exposed Online Due to a Third-Party Breach. To protect against third-party data breaches, companies can: 🔍 Vendor Risk Management: Conduct thorough due diligence and regular security audits of third-party vendors. 🔐 Data Encryption: Encrypt all data shared with third parties. 🔒 Access Control: Limit third-party access to only necessary data.", // 👈 Add your caption
+    media_url: post6, // 👈 Replace with: post6
+    permalink:
+      "https://www.instagram.com/p/C9T-B9ftJpc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2024-07-12",
+    like_count: 0,
+  },
+  {
+    id: 7,
+    caption:
+      "At Transdata, we understand the importance of safeguarding your valuable data. With over 14 years of experience, our team of experts specializes in implementing robust security measures tailored to your specific needs. From encryption protocols to access controls, we offer a comprehensive range of services and solutions to address all your security concerns.", // 👈 Add your caption
+    media_url: post7, // 👈 Replace with: post7
+    permalink:
+      "https://www.instagram.com/p/C6a2oSUrgXr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2024-05-01",
+    like_count: 0,
+  },
+  {
+    id: 8,
+    caption:
+      "Expanding endpoint numbers heightens cyber threat exposure. Robust security measures are crucial for safeguarding against breaches in growing networks. Discover how Transdata can bolster your endpoint security framework, ensuring robust protection against evolving cyber threats.", // 👈 Add your caption
+    media_url: post8, // 👈 Replace with: post8
+    permalink:
+      "https://www.instagram.com/p/C6D7rrIrG6I/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2024-04-24",
+    like_count: 0,
+  },
+  {
+    id: 9,
+    caption:
+      "Concerned about cyber threats? Last year, the Middle East and the UAE saw a troubling 59% of data breaches. At Transdata, we specialize in cyber threat intelligence, offering proactive solutions to safeguard your business. Our expertise spans threat detection, incident response, and risk mitigation, ensuring comprehensive protection against evolving cyber risks.", // 👈 Add your caption
+    media_url: post9, // 👈 Replace with: post9
+    permalink:
+      "https://www.instagram.com/p/C5fd3ShtJt-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2024-04-08",
+    like_count: 1,
+  },
+  {
+    id: 10,
+    caption:
+      "🚨 Is your network architecture resilient enough for today’s digital demands? Frequent downtime, lack of redundancy, legacy hardware, and weak security layers are critical red flags. At Transdata Solutions, we engineer robust IT infrastructures built for uptime, scalability, and cyber defense. ⚙️🛡️", // 👈 Add your caption
+    media_url: post10, // 👈 Replace with: post10
+    permalink:
+      "https://www.instagram.com/p/DKrjkjnt3hN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", // 👈 Add Instagram post link
+    timestamp: "2025-06-09",
+    like_count: 0,
+  },
+];
+// ==========================================
 
 const SocialPosts = () => {
   const socialScrollRef = useRef(null);
-  const [instaPosts, setInstaPosts] = useState([]);
+  const [instaPosts] = useState(INSTAGRAM_POSTS);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,102 +147,9 @@ const SocialPosts = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeftState, setScrollLeftState] = useState(0);
 
-  // 1. Fetch Logic
-  useEffect(() => {
-    const fetchInstagramPosts = async () => {
-      if (!INSTAGRAM_ACCESS_TOKEN) {
-        setInstaPosts([
-          {
-            id: 1,
-            caption:
-              "Innovating the future of urban mobility. #SmartCity #Dubai",
-            media_url:
-              "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-11-25",
-            like_count: 45,
-          },
-          {
-            id: 2,
-            caption:
-              "Highlights from our latest team strategy session. Building resilient infrastructure together.",
-            media_url:
-              "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-11-20",
-            like_count: 128,
-          },
-          {
-            id: 3,
-            caption:
-              "We are hiring! Looking for talented DevOps Engineers to join our growing team.",
-            media_url:
-              "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-11-15",
-            like_count: 76,
-          },
-          {
-            id: 4,
-            caption:
-              "Securing the digital frontier. Our cybersecurity experts at work.",
-            media_url:
-              "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-11-10",
-            like_count: 112,
-          },
-          {
-            id: 5,
-            caption:
-              "Data is the new oil. Transforming raw metrics into actionable intelligence.",
-            media_url:
-              "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-11-05",
-            like_count: 94,
-          },
-          {
-            id: 6,
-            caption: "Partnership announcement: TransData x Global Tech.",
-            media_url:
-              "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-11-01",
-            like_count: 203,
-          },
-          {
-            id: 7,
-            caption: "Behind the scenes at our new Dubai Silicon Oasis HQ.",
-            media_url:
-              "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-10-28",
-            like_count: 88,
-          },
-          {
-            id: 8,
-            caption:
-              "Exploring Edge Computing applications for real-time traffic analysis.",
-            media_url:
-              "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600",
-            timestamp: "2024-10-25",
-            like_count: 67,
-          },
-        ]);
-        return;
-      }
-
-      try {
-        const response = await fetch(
-          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,timestamp&limit=10&access_token=${INSTAGRAM_ACCESS_TOKEN}`,
-        );
-        const data = await response.json();
-        if (data.data) setInstaPosts(data.data);
-      } catch (error) {
-        console.error("Error fetching Instagram posts:", error);
-      }
-    };
-
-    fetchInstagramPosts();
-  }, []);
-
   // 2. Drag Logic
   const handleMouseDown = (e) => {
-    if (e.target.closest("button")) return;
+    if (e.target.closest("button") || e.target.closest("a")) return;
     setIsDown(true);
     setStartX(e.pageX - socialScrollRef.current.offsetLeft);
     setScrollLeftState(socialScrollRef.current.scrollLeft);
@@ -191,7 +214,7 @@ const SocialPosts = () => {
     }, 3500);
 
     return () => clearInterval(interval);
-  }, [isHovered, isDown, instaPosts]);
+  }, [isHovered, isDown]);
 
   const handleScroll = () => {
     if (socialScrollRef.current) {
@@ -259,9 +282,15 @@ const SocialPosts = () => {
           style={{ scrollBehavior: isDown ? "auto" : "smooth" }}
         >
           {instaPosts.map((post) => (
-            <div
+            <a
               key={post.id}
+              href={post.permalink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-none w-[350px] bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow duration-300 select-none cursor-pointer"
+              onClick={(e) => {
+                if (isDown) e.preventDefault();
+              }}
             >
               {/* Header */}
               <div className="p-4 flex items-start justify-between">
@@ -301,18 +330,17 @@ const SocialPosts = () => {
               {/* Media */}
               <div className="mt-2 h-48 bg-gray-100 overflow-hidden">
                 <img
-                  src={post.media_url || post.thumbnail_url}
+                  src={post.media_url}
                   draggable="false"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  alt="Post"
+                  alt="Instagram Post"
                 />
               </div>
 
               {/* Footer */}
               <div className="p-3 border-t border-gray-100 flex justify-between text-gray-500 text-xs font-bold mt-auto">
                 <div className="flex items-center gap-1 hover:text-[#E1306C] transition-colors">
-                  <Heart size={16} />{" "}
-                  {post.like_count || Math.floor(Math.random() * 100) + 20}
+                  <Heart size={16} /> {post.like_count}
                 </div>
                 <div className="flex items-center gap-1 hover:text-[#E1306C] transition-colors">
                   <MessageCircle size={16} /> Comment
@@ -321,7 +349,7 @@ const SocialPosts = () => {
                   <Share2 size={16} /> Share
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
