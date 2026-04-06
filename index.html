@@ -2,11 +2,281 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transdata Solutions</title>
+
+    <!-- ==========================================
+         🎨 FAVICON - Replace with your favicon files
+         ========================================== -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/transdata_files/LOGO_1.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/assets/transdata_files/LOGO_1.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/assets/transdata_files/LOGO_1.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- For Android Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./src/assets/transdata_files/LOGO_1.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="./src/assets/transdata_files/LOGO_1.png"
+    />
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#FFD700" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+
+    <!-- ==========================================
+         📝 PRIMARY META TAGS
+         ========================================== -->
+    <title>TransData Solutions</title>
+    <meta name="title" content="TransData Solutions | IT Experts in UAE" />
+    <meta
+      name="description"
+      content="Transdata solutions empowers businesses through innovative technology, providing reliable, scalable, and secure IT infrastructure that drives growth and operational excellence."
+    />
+    <meta name="keywords" content="TransData Solutions, IT, IT Solutions" />
+    <meta name="author" content="TransData Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+
+    <!-- ==========================================
+         🌐 OPEN GRAPH / FACEBOOK
+         ========================================== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.transdatasolutions.com/" />
+    <!-- 👈 Update with your URL -->
+    <meta
+      property="og:title"
+      content="TransData Solutions | IT Experts in UAE"
+    />
+    <meta
+      property="og:description"
+      content="Transdata solutions empowers businesses through innovative technology, providing reliable, scalable, and secure IT infrastructure that drives growth and operational excellence.."
+    />
+    <meta
+      property="og:image"
+      content="https://www.transdatasolutions.com/og-image.jpg"
+    />
+    <!-- 👈 Add your OG image (1200x630px recommended) -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="TransData Solutions - IT Experts in UAE"
+    />
+    <meta property="og:site_name" content="TransData Solutions" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ==========================================
+         🐦 TWITTER CARD
+         ========================================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.transdatasolutions.com/" />
+    <!-- 👈 Update with your URL -->
+    <meta
+      name="twitter:title"
+      content="TransData Solutions | IT Experts in UAE"
+    />
+    <meta
+      name="twitter:description"
+      content="Transdata solutions empowers businesses through innovative technology, providing reliable, scalable, and secure IT infrastructure that drives growth and operational excellence.."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.transdatasolutions.com/og-image.jpg"
+    />
+    <!-- 👈 Add your Twitter image -->
+    <meta
+      name="twitter:image:alt"
+      content="TransData Solutions - IT Experts in UAE"
+    />
+    <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
+    <!-- 👈 Uncomment and add your Twitter handle -->
+    <!-- <meta name="twitter:creator" content="@YourTwitterHandle" /> -->
+
+    <!-- ==========================================
+         📍 GEO & LOCATION TAGS
+         ========================================== -->
+    <meta name="geo.region" content="AE-DU" />
+    <meta name="geo.placename" content="Dubai" />
+
+    <!-- ==========================================
+         🎨 THEME & BROWSER COLORS
+         ========================================== -->
+    <meta name="theme-color" content="#FFD700" />
+    <!-- 👈 Your brand yellow -->
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="TransData" />
+    <meta name="application-name" content="TransData Solutions" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- ==========================================
+         🔗 CANONICAL & ALTERNATE LINKS
+         ========================================== -->
+    <link rel="canonical" href="https://www.transdatasolutions.com/" />
+    <!-- 👈 Update with your URL -->
+    <!-- Add alternate language versions if applicable -->
+    <!-- <link rel="alternate" hreflang="ar" href="https://www.transdatasolutions.com/ar/" /> -->
+
+    <!-- ==========================================
+         ⚡ PERFORMANCE OPTIMIZATION
+         ========================================== -->
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload critical assets (uncomment and update paths as needed) -->
+    <!-- <link rel="preload" href="/fonts/your-main-font.woff2" as="font" type="font/woff2" crossorigin /> -->
+    <!-- <link rel="preload" href="/src/assets/hero-image.webp" as="image" type="image/webp" /> -->
+
+    <!-- ==========================================
+         🔒 SECURITY HEADERS (via meta tags)
+         ========================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- ==========================================
+         📊 STRUCTURED DATA (JSON-LD)
+         ========================================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TransData Solutions",
+        "alternateName": "TransData",
+        "url": "https://www.transdatasolutions.com",
+        "logo": "https://www.transdatasolutions.com/logo.png",
+        "description": "Transdata solutions empowers businesses through innovative technology, providing reliable, scalable, and secure IT infrastructure that drives growth and operational excellence.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "YOUR STREET ADDRESS",
+          "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
+          "postalCode": "YOUR POSTAL CODE",
+          "addressCountry": "AE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971-XX-XXX-XXXX",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Arabic"]
+        },
+        "sameAs": [
+          "https://www.instagram.com/transdatasolutions/",
+          "https://www.linkedin.com/company/transdatasolutions/",
+          "https://www.facebook.com/transdatasolutions/",
+          "https://twitter.com/transdatasolutions"
+        ],
+        "foundingDate": "YYYY",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Founder Name"
+          }
+        ],
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 25.2048,
+            "longitude": 55.2708
+          },
+          "geoRadius": "50000"
+        },
+        "serviceArea": {
+          "@type": "Place",
+          "name": "United Arab Emirates"
+        }
+      }
+    </script>
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TransData Solutions",
+        "image": "https://www.transdatasolutions.com/logo.png",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "YOUR STREET ADDRESS",
+          "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
+          "postalCode": "YOUR POSTAL CODE",
+          "addressCountry": "AE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.2048,
+          "longitude": 55.2708
+        },
+        "telephone": "+971-XX-XXX-XXXX",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
   </head>
+
   <body>
+    <!-- No-JS Fallback -->
+    <noscript>
+      <div
+        style="
+          padding: 20px;
+          text-align: center;
+          background: #ffd700;
+          color: #000;
+        "
+      >
+        Please enable JavaScript to view this website properly.
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

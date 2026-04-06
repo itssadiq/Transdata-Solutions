@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import videoFile from "../../assets/video.mp4";
+import videoFile from "../../assets/hero-video.mp4";
 import videoPoster from "../../assets/hero-poster.jpg";
 
 const HERO_CONTENT = {

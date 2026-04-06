@@ -34,7 +34,7 @@ const Industries = () => {
           {/* View More Button */}
           {/* Update the 'to' prop to match your actual industries route (e.g., /solutions or /industries) */}
           <Link
-            to="/solutions"
+            to="/industries"
             className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-yellow-500 hover:text-black transition-all duration-300 rounded-sm group"
           >
             See Our Work Across Industries
